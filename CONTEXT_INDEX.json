@@ -1,0 +1,2890 @@
+{
+  "version": "2026-03-01",
+  "generated": "2026-03-01T12:00:00Z",
+  "description": "Machine-readable index for LLM context retrieval",
+
+  "documents": {
+    "docs/README.md": {
+      "title": "Documentation index",
+      "type": "readme",
+      "scope": "shared",
+      "summary": "Navigation hub for framework and project documentation",
+      "keywords": ["docs", "index", "navigation"]
+    },
+
+    "docs/START_HERE.md": {
+      "title": "Documentation Reading Guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Prioritized reading guide for new team members by role (frontend, backend, fullstack)",
+      "keywords": [
+        "onboarding",
+        "reading-guide",
+        "start",
+        "navigation",
+        "priority"
+      ]
+    },
+
+    "docs/framework/README.md": {
+      "title": "Xtnd framework documentation",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Reusable framework documentation for SaaS-first, serverless-first platforms",
+      "keywords": ["xtnd", "framework", "saas", "serverless"]
+    },
+
+    "docs/framework/standards/typescript/README.md": {
+      "title": "TypeScript coding standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Comprehensive TypeScript coding standards covering style, language features, async patterns",
+      "keywords": ["typescript", "coding-standards", "style", "naming"],
+      "related": [
+        "docs/framework/standards/typescript/01-general-language.md",
+        "docs/framework/standards/typescript/02-language-features.md",
+        "docs/framework/standards/typescript/03-async-patterns.md"
+      ]
+    },
+
+    "docs/framework/standards/typescript/01-general-language.md": {
+      "title": "TypeScript general language conventions",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Naming conventions, file organization, import ordering for TypeScript",
+      "keywords": ["typescript", "naming", "imports", "conventions"]
+    },
+
+    "docs/framework/standards/typescript/02-language-features.md": {
+      "title": "TypeScript language features",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "TypeScript-specific features including interfaces, types, generics, strict mode",
+      "keywords": ["typescript", "interfaces", "types", "generics", "strict"]
+    },
+
+    "docs/framework/standards/typescript/03-async-patterns.md": {
+      "title": "TypeScript async patterns",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Async/await patterns, Promise handling, error management",
+      "keywords": ["typescript", "async", "await", "promise", "error-handling"]
+    },
+
+    "docs/framework/standards/typescript/04-tooling.md": {
+      "title": "TypeScript tooling",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "ESLint, Prettier, Husky, lint-staged configuration for TypeScript",
+      "keywords": ["typescript", "eslint", "prettier", "husky", "tooling"]
+    },
+
+    "docs/framework/standards/typescript/05-security-performance.md": {
+      "title": "TypeScript security and performance",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Input validation with Zod, React performance, secrets management",
+      "keywords": ["typescript", "security", "performance", "zod", "validation"]
+    },
+
+    "docs/framework/standards/typescript/error-codes.md": {
+      "title": "TypeScript error codes",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Standardized error codes and error handling conventions",
+      "keywords": ["typescript", "errors", "error-codes", "error-handling"]
+    },
+
+    "docs/framework/standards/nodejs/README.md": {
+      "title": "Node.js coding standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Node.js runtime conventions including ESM modules, environment handling",
+      "keywords": ["nodejs", "esm", "environment", "express", "logging"]
+    },
+
+    "docs/framework/standards/nextjs/README.md": {
+      "title": "Next.js coding standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Next.js 15+ App Router development including routing, data fetching",
+      "keywords": ["nextjs", "app-router", "react", "server-components", "ssr"]
+    },
+
+    "docs/framework/standards/nextjs/url-query-string.md": {
+      "title": "URL query string naming standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "URL query string naming conventions including kebab-case, pagination patterns",
+      "keywords": [
+        "url",
+        "query-string",
+        "kebab-case",
+        "pagination",
+        "filtering"
+      ]
+    },
+
+    "docs/framework/standards/nestjs/README.md": {
+      "title": "NestJS coding standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "NestJS backend services including controllers, providers, DTOs, validation",
+      "keywords": ["nestjs", "controllers", "providers", "dto", "validation"]
+    },
+
+    "docs/framework/standards/rest-api/README.md": {
+      "title": "REST API standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "REST API design standards covering principles, HTTP semantics, naming conventions, request/response formats",
+      "keywords": [
+        "rest",
+        "api",
+        "http",
+        "design",
+        "standards",
+        "naming",
+        "versioning"
+      ],
+      "related": [
+        "docs/framework/standards/rest-api/01-design-principles.md",
+        "docs/framework/standards/rest-api/02-http-semantics.md",
+        "docs/framework/standards/rest-api/03-naming-conventions.md",
+        "docs/framework/standards/rest-api/04-request-response.md"
+      ]
+    },
+
+    "docs/framework/standards/rest-api/01-design-principles.md": {
+      "title": "REST API design principles",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Resource modeling, URI patterns, versioning, and hierarchical relationships",
+      "keywords": ["rest", "api", "design", "resources", "uri", "versioning"]
+    },
+
+    "docs/framework/standards/rest-api/02-http-semantics.md": {
+      "title": "HTTP semantics",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "HTTP method behavior, idempotency patterns, and status code usage",
+      "keywords": ["http", "methods", "status-codes", "idempotency", "rest"]
+    },
+
+    "docs/framework/standards/rest-api/03-naming-conventions.md": {
+      "title": "API naming conventions",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Naming conventions for paths, parameters, JSON payloads, and identifiers",
+      "keywords": [
+        "naming",
+        "conventions",
+        "paths",
+        "json",
+        "camelCase",
+        "kebab-case"
+      ]
+    },
+
+    "docs/framework/standards/rest-api/04-request-response.md": {
+      "title": "Request and response formats",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "API envelope structure, pagination, filtering, and HATEOAS links",
+      "keywords": [
+        "request",
+        "response",
+        "envelope",
+        "pagination",
+        "filtering",
+        "json"
+      ]
+    },
+
+    "docs/framework/standards/rest-api/05-gateway-bff.md": {
+      "title": "API Gateway and BFF patterns",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "API Gateway and Backend for Frontend patterns for routing, security, aggregation",
+      "keywords": [
+        "api-gateway",
+        "bff",
+        "routing",
+        "aggregation",
+        "rate-limiting"
+      ]
+    },
+
+    "docs/framework/standards/rest-api/06-testing.md": {
+      "title": "API testing standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Contract testing, integration testing, and non-functional testing for APIs",
+      "keywords": [
+        "api",
+        "testing",
+        "contract",
+        "integration",
+        "openapi",
+        "performance"
+      ]
+    },
+
+    "docs/framework/standards/rest-api/07-operations.md": {
+      "title": "API operations",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "API monitoring, observability, deployment, and versioning lifecycle",
+      "keywords": [
+        "api",
+        "operations",
+        "monitoring",
+        "observability",
+        "deployment",
+        "versioning"
+      ]
+    },
+
+    "docs/framework/standards/tailwind/README.md": {
+      "title": "Tailwind CSS standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Utility-first CSS best practices for Tailwind including responsive design",
+      "keywords": [
+        "tailwind",
+        "css",
+        "utility-first",
+        "responsive",
+        "dark-mode"
+      ]
+    },
+
+    "docs/framework/standards/uiux/README.md": {
+      "title": "UI/UX design system standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Design system specification covering layout, navigation, theming, accessibility",
+      "keywords": ["design-system", "ui", "ux", "accessibility", "theming"],
+      "related": ["docs/framework/standards/uiux/component-guidelines.md"]
+    },
+
+    "docs/framework/standards/uiux/component-guidelines.md": {
+      "title": "UI Component Guidelines",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Guidelines for building Primitive and Wrapper UI components, including CVA patterns, styling standards, and implementation checklist",
+      "keywords": [
+        "ui",
+        "components",
+        "primitive",
+        "wrapper",
+        "cva",
+        "design-tokens",
+        "radix"
+      ]
+    },
+
+    "docs/framework/standards/database/README.md": {
+      "title": "Database standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Cross-database conventions for naming, modeling, connections, error handling, testing, security",
+      "keywords": [
+        "database",
+        "sql",
+        "nosql",
+        "naming",
+        "modeling",
+        "security"
+      ],
+      "related": [
+        "docs/framework/standards/database/postgresql/README.md",
+        "docs/framework/standards/database/dynamodb/README.md",
+        "docs/framework/standards/database/opensearch/README.md"
+      ]
+    },
+
+    "docs/framework/standards/database/postgresql/README.md": {
+      "title": "PostgreSQL standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "PostgreSQL-specific conventions for naming, schema design, migrations, queries, performance",
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "sql",
+        "rds",
+        "migrations",
+        "schema"
+      ]
+    },
+
+    "docs/framework/standards/database/dynamodb/README.md": {
+      "title": "DynamoDB standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "DynamoDB-specific conventions for naming, data modeling, query patterns, performance",
+      "keywords": ["dynamodb", "nosql", "aws", "single-table", "gsi", "lsi"]
+    },
+
+    "docs/framework/standards/database/opensearch/README.md": {
+      "title": "OpenSearch standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "OpenSearch-specific conventions for naming, index design, query patterns, performance",
+      "keywords": ["opensearch", "elasticsearch", "search", "indexing", "aws"]
+    },
+
+    "docs/framework/standards/aws/README.md": {
+      "title": "AWS standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "AWS resource conventions for naming, tagging, configuration, secrets management",
+      "keywords": ["aws", "naming", "tagging", "resources", "secrets"],
+      "related": [
+        "docs/framework/standards/aws/01-naming-conventions.md",
+        "docs/framework/standards/aws/02-tagging-strategy.md",
+        "docs/framework/standards/aws/03-resource-configuration.md",
+        "docs/framework/standards/aws/04-secrets-management.md"
+      ]
+    },
+
+    "docs/framework/standards/markdown.md": {
+      "title": "Markdown standards",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Markdown documentation conventions and formatting rules",
+      "keywords": ["markdown", "documentation", "formatting"]
+    },
+
+    "docs/framework/architectures/README.md": {
+      "title": "Architecture documentation",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Index for framework architecture including ADRs, backend, frontend, monorepo",
+      "keywords": ["architecture", "adr", "backend", "frontend", "monorepo"]
+    },
+
+    "docs/framework/architectures/monorepo/README.md": {
+      "title": "Monorepo architecture",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Nx workspace structure, boundaries, tagging, and governance",
+      "keywords": ["nx", "monorepo", "workspace", "boundaries", "tags"],
+      "related": [
+        "docs/framework/architectures/monorepo/principles.md",
+        "docs/framework/architectures/monorepo/layout/README.md",
+        "docs/framework/architectures/monorepo/domain-modules.md"
+      ]
+    },
+
+    "docs/framework/architectures/monorepo/principles.md": {
+      "title": "Monorepo principles",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Core principles for Nx monorepo including DDD, clean architecture, boundaries",
+      "keywords": ["nx", "monorepo", "principles", "ddd", "clean-architecture"]
+    },
+
+    "docs/framework/architectures/monorepo/layout/README.md": {
+      "title": "Monorepo layout overview",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Complete folder structure overview with links to detailed documentation",
+      "keywords": [
+        "nx",
+        "monorepo",
+        "layout",
+        "folder-structure",
+        "organization"
+      ],
+      "related": [
+        "docs/framework/architectures/monorepo/layout/01-shared-libs.md",
+        "docs/framework/architectures/monorepo/layout/02-domain-template.md",
+        "docs/framework/architectures/monorepo/layout/04-ui-libs.md",
+        "docs/framework/architectures/monorepo/layout/05-apps.md"
+      ]
+    },
+
+    "docs/framework/architectures/monorepo/layout/01-shared-libs.md": {
+      "title": "Shared libraries layout",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Structure and organization of shared libraries in the monorepo",
+      "keywords": ["shared", "libraries", "monorepo", "nx"]
+    },
+
+    "docs/framework/architectures/monorepo/layout/02-domain-template.md": {
+      "title": "Domain module template",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Standard template for structuring domain modules with clean architecture layers",
+      "keywords": ["domain", "module", "template", "clean-architecture", "ddd"]
+    },
+
+    "docs/xtnd/architecture/xtnd-iam-architecture.md": {
+      "title": "IAM architecture: Heartwood, Canopy IAM, and auth-core",
+      "type": "architecture",
+      "scope": "xtnd",
+      "summary": "IAM reference implementation showing auth-core (shared RBAC + canonical domain model), Heartwood (tenant IAM), and Canopy IAM (admin IAM) as separate bounded contexts with per-audience tables, distributed capability registry, and async context propagation",
+      "keywords": [
+        "iam",
+        "heartwood",
+        "canopy",
+        "auth-core",
+        "tenant-core",
+        "identity",
+        "authentication",
+        "authorization",
+        "rbac",
+        "casl",
+        "principal",
+        "identity-context",
+        "async-context",
+        "capability-registry"
+      ]
+    },
+
+    "docs/xtnd/architecture/xtnd-app-structure.md": {
+      "title": "App structure and page composition",
+      "type": "architecture",
+      "scope": "xtnd",
+      "summary": "Full app structure for all XTND apps showing shell layout, routing, page composition, and import boundaries",
+      "keywords": [
+        "app-structure",
+        "shell",
+        "routing",
+        "page-composition",
+        "next-js",
+        "layout",
+        "navigation"
+      ]
+    },
+
+    "docs/framework/architectures/monorepo/layout/04-ui-libs.md": {
+      "title": "UI libraries layout",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Structure and organization of UI component libraries",
+      "keywords": ["ui", "components", "libraries", "design-system"]
+    },
+
+    "docs/framework/architectures/monorepo/layout/05-apps.md": {
+      "title": "Applications layout",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Structure and organization of applications in the monorepo",
+      "keywords": ["apps", "applications", "web-app", "monorepo"]
+    },
+
+    "docs/framework/architectures/monorepo/domain-modules.md": {
+      "title": "Domain modules",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Design patterns for core domain modules including IAM, Notification, AuditLog",
+      "keywords": ["nx", "domain", "modules", "iam", "notification", "audit"]
+    },
+
+    "docs/framework/architectures/monorepo/extension-guide.md": {
+      "title": "Monorepo extension guide",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Guide for adding new libraries and modules to the monorepo",
+      "keywords": ["nx", "monorepo", "extension", "new-library", "generator"]
+    },
+
+    "docs/framework/architectures/monorepo/tooling-compliance.md": {
+      "title": "Tooling and compliance",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Monorepo tooling setup and compliance enforcement",
+      "keywords": ["nx", "tooling", "compliance", "eslint", "boundaries"]
+    },
+
+    "docs/framework/architectures/frontend/README.md": {
+      "title": "Frontend architecture",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Web experience structure, theming, data flows for Next.js applications",
+      "keywords": ["frontend", "nextjs", "react", "architecture", "theming"],
+      "related": [
+        "docs/framework/architectures/frontend/foundation.md",
+        "docs/framework/architectures/frontend/data-layer.md",
+        "docs/framework/architectures/frontend/quality.md"
+      ]
+    },
+
+    "docs/framework/architectures/frontend/foundation.md": {
+      "title": "Frontend foundation",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Core architectural decisions and Nx monorepo structure for frontend",
+      "keywords": ["frontend", "foundation", "nx", "architecture"]
+    },
+
+    "docs/framework/architectures/frontend/data-layer.md": {
+      "title": "Frontend data layer",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "State management and authentication patterns for frontend",
+      "keywords": ["frontend", "data", "state", "rtk-query", "authentication"]
+    },
+
+    "docs/framework/architectures/frontend/experience.md": {
+      "title": "Frontend experience layer",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "User experience patterns for frontend applications",
+      "keywords": ["frontend", "ux", "experience", "patterns"]
+    },
+
+    "docs/framework/architectures/frontend/operations.md": {
+      "title": "Frontend operations",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Operational concerns for frontend applications",
+      "keywords": ["frontend", "operations", "monitoring", "deployment"]
+    },
+
+    "docs/framework/architectures/frontend/quality.md": {
+      "title": "Frontend quality",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Testing, accessibility, and performance for frontend applications",
+      "keywords": [
+        "frontend",
+        "testing",
+        "accessibility",
+        "performance",
+        "jest"
+      ]
+    },
+
+    "docs/framework/architectures/frontend/data/README.md": {
+      "title": "Frontend data patterns",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Data layer patterns for frontend applications",
+      "keywords": ["frontend", "data", "api", "state-management"]
+    },
+
+    "docs/framework/architectures/frontend/data/state-management.md": {
+      "title": "Frontend state management",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "State management patterns with RTK Query and React Context",
+      "keywords": ["state-management", "rtk-query", "redux", "context"]
+    },
+
+    "docs/framework/architectures/frontend/operations/README.md": {
+      "title": "Frontend operations patterns",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Operational patterns for frontend applications",
+      "keywords": ["frontend", "operations", "error-handling", "observability"]
+    },
+
+    "docs/framework/architectures/frontend/operations/error-shapes.md": {
+      "title": "Frontend error shapes",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Standardized error shapes for frontend applications",
+      "keywords": ["errors", "error-shapes", "frontend", "types"]
+    },
+
+    "docs/framework/architectures/frontend/operations/handling-patterns.md": {
+      "title": "Frontend error handling patterns",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Patterns for handling errors in frontend applications",
+      "keywords": ["error-handling", "patterns", "frontend", "react"]
+    },
+
+    "docs/framework/architectures/frontend/operations/observability.md": {
+      "title": "Frontend observability",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Observability patterns for frontend applications",
+      "keywords": ["observability", "monitoring", "logging", "frontend"]
+    },
+
+    "docs/framework/architectures/backend/README.md": {
+      "title": "Backend architecture",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Platform-wide solution design, infrastructure patterns for NestJS/Node",
+      "keywords": ["backend", "nestjs", "node", "architecture", "api"],
+      "related": [
+        "docs/framework/architectures/backend/overview.md",
+        "docs/framework/architectures/backend/components.md",
+        "docs/framework/architectures/backend/integration.md"
+      ]
+    },
+
+    "docs/framework/architectures/backend/overview.md": {
+      "title": "Backend overview",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Executive summary of platform architecture including system context, actors",
+      "keywords": ["backend", "overview", "platform", "actors", "deployment"]
+    },
+
+    "docs/framework/architectures/backend/components.md": {
+      "title": "Backend components",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Platform components including frontends, API layer, domain modules",
+      "keywords": ["backend", "components", "api", "domain", "modules"]
+    },
+
+    "docs/framework/architectures/backend/integration.md": {
+      "title": "Backend integration",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Integration patterns for backend services",
+      "keywords": ["backend", "integration", "api", "services"]
+    },
+
+    "docs/framework/architectures/backend/identity-directory.md": {
+      "title": "Identity and directory",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Multi-tenant identity architecture covering SSO federation, SCIM, tenant isolation",
+      "keywords": ["identity", "sso", "scim", "multi-tenant", "authentication"]
+    },
+
+    "docs/framework/architectures/backend/event-driven/README.md": {
+      "title": "Event-Driven Architecture Guide",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Index for event-driven architecture documentation covering event types, envelope, catalog, publishing, versioning, workflows, reliability, security, transport, best practices, local development, and operations",
+      "keywords": [
+        "eda",
+        "events",
+        "domain-events",
+        "integration-events",
+        "saga",
+        "outbox",
+        "dlq",
+        "workflow",
+        "eventbridge",
+        "sns",
+        "sqs"
+      ],
+      "related": [
+        "docs/framework/architectures/backend/event-driven/01-event-types.md",
+        "docs/framework/architectures/backend/event-driven/02-event-envelope.md",
+        "docs/framework/architectures/backend/event-driven/06-workflows-sagas.md",
+        "docs/framework/architectures/backend/event-driven/07-reliability.md",
+        "docs/framework/architectures/backend/event-driven/08-security.md",
+        "docs/framework/architectures/backend/event-driven/09-transport-evaluation.md",
+        "docs/framework/architectures/backend/event-driven/10-best-practices.md",
+        "docs/framework/architectures/backend/event-driven/11-local-development.md",
+        "docs/framework/architectures/backend/event-driven/12-operations-runbook.md",
+        "docs/framework/architectures/adrs/eda-aws-native.md"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/01-event-types.md": {
+      "title": "Event Types",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Domain events vs integration events, characteristics, conversion patterns",
+      "keywords": [
+        "domain-events",
+        "integration-events",
+        "bounded-context",
+        "event-conversion"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/02-event-envelope.md": {
+      "title": "Event Envelope Standard",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Standard event envelope schema, field definitions, naming conventions",
+      "keywords": [
+        "event-envelope",
+        "event-schema",
+        "naming-convention",
+        "correlation-id",
+        "trace-id"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/03-event-catalog.md": {
+      "title": "Event Catalog",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Event catalog and documentation standards",
+      "keywords": ["event-catalog", "documentation", "events"]
+    },
+
+    "docs/framework/architectures/backend/event-driven/04-publishing-consuming.md": {
+      "title": "Event Publishing and Consuming",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Patterns for publishing and consuming events",
+      "keywords": ["publishing", "consuming", "events", "sns", "sqs"]
+    },
+
+    "docs/framework/architectures/backend/event-driven/05-versioning.md": {
+      "title": "Event Versioning",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Event versioning strategies and compatibility",
+      "keywords": ["versioning", "events", "compatibility", "schema"]
+    },
+
+    "docs/framework/architectures/backend/event-driven/06-workflows-sagas.md": {
+      "title": "Workflows and Sagas",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Saga patterns, workflow orchestration options, compensation strategies",
+      "keywords": [
+        "saga",
+        "workflow",
+        "orchestration",
+        "choreography",
+        "compensation",
+        "durable-functions",
+        "temporal"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/07-reliability.md": {
+      "title": "Reliability Patterns",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Event reliability patterns including DLQ, retry strategies, event replay, circuit breakers",
+      "keywords": [
+        "reliability",
+        "dlq",
+        "dead-letter-queue",
+        "retry",
+        "event-replay",
+        "circuit-breaker"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/08-security.md": {
+      "title": "Event Security",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Event security patterns including payload security, transport security, access control, multi-tenant isolation",
+      "keywords": [
+        "event-security",
+        "pii",
+        "encryption",
+        "access-control",
+        "multi-tenant",
+        "compliance",
+        "gdpr"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/09-transport-evaluation.md": {
+      "title": "Transport Evaluation",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Evaluation of EventBridge, Kafka, and Dapr with limits analysis, cost projections, and phase transition criteria",
+      "keywords": [
+        "eventbridge",
+        "kafka",
+        "msk",
+        "dapr",
+        "transport",
+        "limits",
+        "cost"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/10-best-practices.md": {
+      "title": "Best Practices and Design Principles",
+      "type": "architecture",
+      "scope": "framework",
+      "summary": "Design principles covering commands vs events, light vs rich events, push vs poll, choreography vs orchestration, testing isolation, and anti-patterns",
+      "keywords": [
+        "best-practices",
+        "commands-vs-events",
+        "light-events",
+        "rich-events",
+        "push-vs-poll",
+        "choreography",
+        "orchestration",
+        "anti-patterns"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/11-local-development.md": {
+      "title": "Local Development",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Local development setup for event-driven systems including testing layers, in-memory event bus, LocalStack Docker Compose, CDK construct testing, and ephemeral stacks",
+      "keywords": [
+        "local-development",
+        "localstack",
+        "docker",
+        "testing",
+        "in-memory-bus",
+        "event-testing",
+        "ephemeral"
+      ]
+    },
+
+    "docs/framework/architectures/backend/event-driven/12-operations-runbook.md": {
+      "title": "Operations Runbook",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Operational procedures for DLQ processing, event replay, monitoring, alerting, incident response, and health checks",
+      "keywords": [
+        "operations",
+        "runbook",
+        "dlq",
+        "replay",
+        "monitoring",
+        "alerting",
+        "incident-response",
+        "cloudwatch"
+      ]
+    },
+
+    "docs/framework/architectures/adrs/README.md": {
+      "title": "Architecture decision records",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Index of all ADRs for frontend and backend architectural decisions",
+      "keywords": ["adr", "decisions", "architecture"]
+    },
+
+    "docs/framework/architectures/adrs/fe-framework.md": {
+      "title": "ADR: Next.js 15 App Router",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of Next.js 15 App Router as baseline frontend framework",
+      "keywords": ["adr", "nextjs", "app-router", "frontend", "framework"]
+    },
+
+    "docs/framework/architectures/adrs/fe-state-management.md": {
+      "title": "ADR: Redux Toolkit (RTK + RTK Query)",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of RTK Query for server state and React Context for local UI state",
+      "keywords": ["adr", "rtk", "rtk-query", "state-management", "redux"]
+    },
+
+    "docs/framework/architectures/adrs/fe-auth.md": {
+      "title": "ADR: Frontend authentication",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Frontend authentication strategy and implementation",
+      "keywords": ["adr", "authentication", "frontend", "jwt", "session"]
+    },
+
+    "docs/framework/architectures/adrs/fe-design-system.md": {
+      "title": "ADR: Frontend design system",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Design system selection and implementation approach",
+      "keywords": ["adr", "design-system", "tailwind", "ui", "components"]
+    },
+
+    "docs/framework/architectures/adrs/fe-testing-toolchain.md": {
+      "title": "ADR: Frontend testing toolchain",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of Jest and Playwright for frontend testing",
+      "keywords": ["adr", "testing", "jest", "playwright", "frontend"]
+    },
+
+    "docs/framework/architectures/adrs/be-framework.md": {
+      "title": "ADR: Node.js + NestJS",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of Node.js with NestJS for backend services and serverless handlers",
+      "keywords": ["adr", "nodejs", "nestjs", "backend", "serverless"]
+    },
+
+    "docs/framework/architectures/adrs/be-cloud.md": {
+      "title": "ADR: Amazon Web Services",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of AWS as primary cloud platform",
+      "keywords": ["adr", "aws", "cloud", "infrastructure"]
+    },
+
+    "docs/framework/architectures/adrs/be-iac.md": {
+      "title": "ADR: AWS CDK (TypeScript)",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of AWS CDK with TypeScript as infrastructure as code tool",
+      "keywords": ["adr", "aws-cdk", "iac", "infrastructure", "terraform"]
+    },
+
+    "docs/framework/architectures/adrs/monorepo-tooling.md": {
+      "title": "ADR: Monorepo Tooling - Nx",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of Nx over Turborepo for monorepo build orchestration",
+      "keywords": ["adr", "nx", "turborepo", "monorepo", "build", "tooling"]
+    },
+
+    "docs/framework/architectures/adrs/eda-aws-native.md": {
+      "title": "ADR: Event-Driven Architecture - AWS Native",
+      "type": "adr",
+      "scope": "framework",
+      "summary": "Selection of event-driven architecture using AWS-native services",
+      "keywords": [
+        "adr",
+        "eda",
+        "event-driven",
+        "aws",
+        "sns",
+        "sqs",
+        "eventbridge"
+      ]
+    },
+
+    "docs/framework/playbooks/README.md": {
+      "title": "Software playbooks",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Reusable reference guides for compute, security, and operations decisions",
+      "keywords": ["playbooks", "decisions", "architecture", "operations"]
+    },
+
+    "docs/framework/playbooks/multi-tenancy.md": {
+      "title": "Multi-tenancy playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Tenant isolation models, data partitioning, provisioning, billing integration",
+      "keywords": [
+        "multi-tenancy",
+        "tenant",
+        "isolation",
+        "saas",
+        "partitioning"
+      ]
+    },
+
+    "docs/framework/playbooks/identity-access.md": {
+      "title": "Identity and access playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Authentication, authorization, federation, session policies",
+      "keywords": [
+        "identity",
+        "access",
+        "authentication",
+        "authorization",
+        "sso"
+      ]
+    },
+
+    "docs/framework/playbooks/observability-sre.md": {
+      "title": "Observability and SRE playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Metrics, logs, traces, SLIs/SLOs, alerting, dashboards",
+      "keywords": [
+        "observability",
+        "sre",
+        "metrics",
+        "logging",
+        "tracing",
+        "slo"
+      ]
+    },
+
+    "docs/framework/playbooks/resilience-dr.md": {
+      "title": "Resilience and DR playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Multi-AZ/region strategies, backups, chaos engineering, graceful degradation",
+      "keywords": ["resilience", "disaster-recovery", "ha", "backup", "chaos"]
+    },
+
+    "docs/framework/playbooks/deployment-models.md": {
+      "title": "Deployment models playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Containerization, serverless, and hybrid compute models",
+      "keywords": ["deployment", "containers", "serverless", "lambda", "ecs"]
+    },
+
+    "docs/framework/playbooks/architecture-patterns.md": {
+      "title": "Architecture patterns playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Modular, clean, event-driven, microservices, DDD, CQRS patterns",
+      "keywords": ["architecture", "patterns", "ddd", "cqrs", "event-driven"]
+    },
+
+    "docs/framework/playbooks/devsecops-sdlc.md": {
+      "title": "DevSecOps and SDLC playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Shift-left security, CI/CD gates, code scanning, secret management",
+      "keywords": ["devsecops", "sdlc", "security", "ci-cd", "scanning"]
+    },
+
+    "docs/framework/playbooks/storage-data.md": {
+      "title": "Storage and data playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Database selection, retention policies, encryption, data governance",
+      "keywords": ["storage", "data", "database", "encryption", "governance"]
+    },
+
+    "docs/framework/playbooks/compliance-governance.md": {
+      "title": "Compliance and governance playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Compliance frameworks, audit trails, governance policies",
+      "keywords": [
+        "compliance",
+        "governance",
+        "audit",
+        "regulations",
+        "policies"
+      ]
+    },
+
+    "docs/framework/playbooks/design-principals.md": {
+      "title": "Design principles playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Core design principles for system architecture",
+      "keywords": ["design", "principles", "architecture", "patterns"]
+    },
+
+    "docs/framework/playbooks/cost-finops.md": {
+      "title": "Cost and FinOps playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Cloud cost management, optimization, FinOps practices",
+      "keywords": ["cost", "finops", "optimization", "aws", "billing"]
+    },
+
+    "docs/framework/playbooks/networking-connectivity.md": {
+      "title": "Networking and connectivity playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "VPC design, connectivity patterns, DNS, CDN",
+      "keywords": ["networking", "vpc", "connectivity", "dns", "cdn"]
+    },
+
+    "docs/framework/playbooks/edge-offline-realtime.md": {
+      "title": "Edge, offline, and realtime playbook",
+      "type": "playbook",
+      "scope": "framework",
+      "summary": "Edge computing, offline-first, realtime data patterns",
+      "keywords": ["edge", "offline", "realtime", "websocket", "sync"]
+    },
+
+    "docs/practices/README.md": {
+      "title": "Engineering Practices",
+      "type": "readme",
+      "scope": "shared",
+      "summary": "Reusable engineering practices covering git workflow, code review, testing, dependencies, and technical debt",
+      "keywords": [
+        "practices",
+        "engineering",
+        "git",
+        "code-review",
+        "testing",
+        "dependencies",
+        "technical-debt"
+      ]
+    },
+
+    "docs/practices/git-workflow.md": {
+      "title": "Git workflow guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Git workflow standards including Gitflow branching, commit conventions",
+      "keywords": ["git", "gitflow", "branching", "commits", "workflow"]
+    },
+
+    "docs/practices/source-control-management.md": {
+      "title": "Source control management",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Monorepo strategy with Nx including repository structure, clean architecture",
+      "keywords": ["monorepo", "nx", "source-control", "repository"]
+    },
+
+    "docs/practices/code-review.md": {
+      "title": "Code review guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Code review standards, checklists, approval criteria, and review etiquette",
+      "keywords": [
+        "code-review",
+        "pull-request",
+        "approval",
+        "checklist",
+        "quality"
+      ]
+    },
+
+    "docs/processes/onboarding.md": {
+      "title": "Engineering onboarding guide",
+      "type": "guide",
+      "scope": "project",
+      "summary": "New engineer onboarding covering environment setup, codebase orientation, and ramp-up milestones",
+      "keywords": [
+        "onboarding",
+        "setup",
+        "new-engineer",
+        "getting-started",
+        "environment"
+      ]
+    },
+
+    "docs/practices/testing-strategy.md": {
+      "title": "Testing strategy guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Testing strategy covering test pyramid, coverage targets, testing patterns, and when to write each test type",
+      "keywords": [
+        "testing",
+        "jest",
+        "playwright",
+        "unit-test",
+        "integration-test",
+        "e2e",
+        "coverage"
+      ]
+    },
+
+    "docs/practices/dependency-management.md": {
+      "title": "Dependency management guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Dependency management covering evaluation criteria, security review, updates, and supply chain security",
+      "keywords": [
+        "dependencies",
+        "npm",
+        "pnpm",
+        "security",
+        "updates",
+        "supply-chain",
+        "vulnerabilities"
+      ]
+    },
+
+    "docs/practices/technical-debt.md": {
+      "title": "Technical debt management guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Technical debt identification, tracking, prioritization, and paydown strategies across code, architecture, dependencies, testing, documentation, and infrastructure",
+      "keywords": [
+        "technical-debt",
+        "refactoring",
+        "code-quality",
+        "maintainability",
+        "prioritization",
+        "debt-tracking"
+      ]
+    },
+
+    "docs/practices/ai-assisted-development.md": {
+      "title": "AI-assisted development guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Guidelines for AI-assisted development workflows and best practices",
+      "keywords": ["ai", "claude", "llm", "development", "automation"]
+    },
+
+    "docs/practices/decision-capture.md": {
+      "title": "Decision capture guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Process for capturing and documenting technical decisions",
+      "keywords": ["decisions", "adr", "documentation", "capture"]
+    },
+
+    "docs/practices/api-testing.md": {
+      "title": "API testing guide",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "API testing practices using Bruno including collection management, request conventions, and PR workflow",
+      "keywords": [
+        "api-testing",
+        "bruno",
+        "api-client",
+        "integration-testing",
+        "bru",
+        "collections"
+      ]
+    },
+
+    "tools/bruno/docs/design-notes.md": {
+      "title": "Bruno design notes",
+      "type": "adr",
+      "scope": "shared",
+      "summary": "Architecture decisions for API testing tooling: why Bruno, collection-per-repo, module-based organization",
+      "keywords": ["bruno", "api-testing", "tooling", "adr"]
+    },
+
+    "tools/bruno/docs/request-conventions.md": {
+      "title": "Bruno request conventions",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Standards for .bru request files including naming, required blocks, variable interpolation, assertion patterns",
+      "keywords": ["bruno", "bru", "request", "conventions", "assertions"]
+    },
+
+    "tools/bruno/docs/workflow.md": {
+      "title": "Bruno workflow",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "Day-to-day engineer workflow for Bruno API collection: GUI usage, CLI commands, PR checklist",
+      "keywords": ["bruno", "workflow", "cli", "api-testing"]
+    },
+
+    "docs/framework/devsecops/README.md": {
+      "title": "DevSecOps guide",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Comprehensive DevSecOps practices and implementation guides",
+      "keywords": ["devsecops", "security", "ci-cd", "infrastructure"],
+      "related": [
+        "docs/framework/devsecops/01-infrastructure-as-code.md",
+        "docs/framework/devsecops/02-ci-cd-pipelines.md",
+        "docs/framework/devsecops/03-security-practices.md",
+        "docs/framework/devsecops/04-observability.md"
+      ]
+    },
+
+    "docs/framework/devsecops/01-infrastructure-as-code.md": {
+      "title": "Infrastructure as Code",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "IaC best practices with AWS CDK",
+      "keywords": ["iac", "cdk", "terraform", "infrastructure", "aws"]
+    },
+
+    "docs/framework/devsecops/02-ci-cd-pipelines.md": {
+      "title": "CI/CD Pipelines",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "CI/CD pipeline design and implementation",
+      "keywords": ["ci-cd", "pipelines", "github-actions", "deployment"]
+    },
+
+    "docs/framework/devsecops/03-security-practices.md": {
+      "title": "Security Practices",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Security practices for DevSecOps",
+      "keywords": ["security", "scanning", "secrets", "vulnerabilities"]
+    },
+
+    "docs/framework/devsecops/04-observability.md": {
+      "title": "DevSecOps Observability",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Observability in DevSecOps pipelines",
+      "keywords": ["observability", "monitoring", "logging", "devsecops"]
+    },
+
+    "docs/framework/devsecops/05-governance-compliance.md": {
+      "title": "Governance and Compliance",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Governance and compliance in DevSecOps",
+      "keywords": ["governance", "compliance", "policies", "audit"]
+    },
+
+    "docs/framework/devsecops/06-release-management.md": {
+      "title": "Release Management",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Release management practices and versioning",
+      "keywords": ["release", "versioning", "deployment", "changelog"]
+    },
+
+    "docs/framework/devsecops/07-local-development.md": {
+      "title": "Local Development",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Local development environment setup and practices",
+      "keywords": ["local", "development", "docker", "environment"]
+    },
+
+    "docs/framework/devsecops/08-incident-response.md": {
+      "title": "Incident Response",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Incident response procedures and runbooks",
+      "keywords": ["incident", "response", "runbook", "recovery"]
+    },
+
+    "docs/framework/devsecops/sre-checklist.md": {
+      "title": "SRE Checklist",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Site reliability engineering checklist",
+      "keywords": ["sre", "checklist", "reliability", "operations"]
+    },
+
+    "docs/framework/cross-cutting/README.md": {
+      "title": "Cross-cutting concerns",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Cross-cutting concerns that span multiple layers",
+      "keywords": [
+        "cross-cutting",
+        "logging",
+        "error-handling",
+        "configuration"
+      ]
+    },
+
+    "docs/framework/cross-cutting/configuration-management.md": {
+      "title": "Configuration management",
+      "type": "guide",
+      "scope": "framework",
+      "summary": "Configuration management patterns and practices",
+      "keywords": ["configuration", "environment", "secrets", "management"]
+    },
+
+    "docs/framework/cross-cutting/error-handling/README.md": {
+      "title": "Error handling framework",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Comprehensive error handling framework documentation",
+      "keywords": ["error-handling", "errors", "exceptions", "patterns"],
+      "related": [
+        "docs/framework/cross-cutting/error-handling/01-requirements.md",
+        "docs/framework/cross-cutting/error-handling/02-design.md",
+        "docs/framework/cross-cutting/error-handling/03-error-model.md"
+      ]
+    },
+
+    "docs/framework/cross-cutting/logging/README.md": {
+      "title": "Logging framework",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Comprehensive logging framework documentation",
+      "keywords": ["logging", "logs", "structured-logging", "observability"],
+      "related": [
+        "docs/framework/cross-cutting/logging/01-requirements.md",
+        "docs/framework/cross-cutting/logging/02-design.md",
+        "docs/framework/cross-cutting/logging/03-log-format.md"
+      ]
+    },
+
+    "docs/framework/decisions/README.md": {
+      "title": "Framework decisions",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Index for framework-level decisions and drafts",
+      "keywords": ["decisions", "drafts", "adr"]
+    },
+
+    "docs/framework/modules/README.md": {
+      "title": "Framework modules",
+      "type": "readme",
+      "scope": "framework",
+      "summary": "Documentation for common framework modules",
+      "keywords": ["modules", "shared", "common"]
+    },
+
+    "docs/specs/observability-libraries.md": {
+      "title": "Observability Libraries Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "Architecture overview for observability libraries including logging, tracing, health checks with adapter pattern",
+      "keywords": [
+        "observability",
+        "o11y",
+        "logging",
+        "tracing",
+        "health",
+        "otel",
+        "opentelemetry"
+      ],
+      "related": [
+        "docs/specs/logging-libraries.md",
+        "docs/specs/tracing-libraries.md",
+        "docs/specs/health-libraries.md",
+        "docs/specs/nestjs-o11y.md"
+      ]
+    },
+
+    "docs/specs/logging-libraries.md": {
+      "title": "Logging Libraries Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "Framework-agnostic logging with Pino adapter, multiple output formats, automatic redaction",
+      "keywords": ["logging", "pino", "structured-logs", "redaction", "o11y"]
+    },
+
+    "docs/specs/tracing-libraries.md": {
+      "title": "Tracing Libraries Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "Distributed tracing with OpenTelemetry, vendor-agnostic OTLP export, span management",
+      "keywords": [
+        "tracing",
+        "opentelemetry",
+        "otel",
+        "spans",
+        "distributed-tracing",
+        "o11y"
+      ]
+    },
+
+    "docs/specs/health-libraries.md": {
+      "title": "Health Libraries Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "Kubernetes-ready health checks with liveness/readiness probes, health indicators",
+      "keywords": [
+        "health",
+        "kubernetes",
+        "liveness",
+        "readiness",
+        "k8s",
+        "o11y"
+      ]
+    },
+
+    "docs/specs/nestjs-o11y.md": {
+      "title": "NestJS Observability Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "NestJS integration for logging, tracing, health with decorators and interceptors",
+      "keywords": [
+        "nestjs",
+        "observability",
+        "o11y",
+        "logging",
+        "tracing",
+        "health",
+        "interceptor"
+      ]
+    },
+
+    "docs/specs/lambda-handler.md": {
+      "title": "Lambda Handler Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "Middy-based Lambda handler factory with correlation ID, logging, tracing, error handling",
+      "keywords": ["lambda", "serverless", "middy", "aws", "handler", "o11y"]
+    },
+
+    "docs/specs/nestjs-lambda.md": {
+      "title": "NestJS Lambda Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "NestJS on Lambda (lambdalith) bootstrap with cold start optimization",
+      "keywords": ["nestjs", "lambda", "serverless", "lambdalith", "aws"]
+    },
+
+    "docs/specs/async-context.md": {
+      "title": "Async Context Specification",
+      "type": "spec",
+      "scope": "framework",
+      "summary": "Request-scoped context propagation using Node.js AsyncLocalStorage",
+      "keywords": [
+        "async-context",
+        "asynclocalstorage",
+        "request-scope",
+        "correlation-id"
+      ]
+    },
+
+    "docs/debt/README.md": {
+      "title": "Technical debt tracking",
+      "type": "readme",
+      "scope": "shared",
+      "summary": "Technical debt registry and tracking",
+      "keywords": ["debt", "technical-debt", "tracking", "backlog"]
+    },
+
+    "docs/mental-models/README.md": {
+      "title": "Mental models",
+      "type": "readme",
+      "scope": "shared",
+      "summary": "Shared mental models, patterns, and anti-patterns",
+      "keywords": ["mental-models", "patterns", "anti-patterns", "domain"]
+    },
+
+    "docs/processes/README.md": {
+      "title": "Team Processes",
+      "type": "readme",
+      "scope": "project",
+      "summary": "Project-specific team processes, workflows, and operational guidelines",
+      "keywords": [
+        "processes",
+        "team",
+        "workflow",
+        "agile",
+        "onboarding",
+        "capacity"
+      ]
+    },
+
+    "docs/processes/way-of-working.md": {
+      "title": "Way of Working",
+      "type": "guide",
+      "scope": "project",
+      "summary": "Team working agreements covering communication, request handling, and knowledge management",
+      "keywords": [
+        "way-of-working",
+        "communication",
+        "requests",
+        "process",
+        "team-agreements",
+        "no-dm"
+      ]
+    },
+
+    "docs/processes/ticket-creation.md": {
+      "title": "Ticket Creation Standards",
+      "type": "guide",
+      "scope": "project",
+      "summary": "Standards for creating well-structured Jira tickets using AI assistance and team conventions",
+      "keywords": [
+        "ticket",
+        "jira",
+        "story",
+        "bug",
+        "creation",
+        "ai-assisted",
+        "agile"
+      ]
+    },
+
+    "docs/processes/capacity-model.md": {
+      "title": "Capacity Model",
+      "type": "guide",
+      "scope": "project",
+      "summary": "Sprint capacity calculation, story point calibration, and timesheet booking rules",
+      "keywords": [
+        "capacity",
+        "sprint-planning",
+        "story-points",
+        "timesheet",
+        "booking"
+      ]
+    },
+
+    "docs/practices/story-title-naming.md": {
+      "title": "Story Title Naming Standards",
+      "type": "guide",
+      "scope": "shared",
+      "summary": "JIRA story title conventions for clear, scannable backlog items",
+      "keywords": ["story", "naming", "jira", "agile", "backlog", "title-case"]
+    },
+
+    "docs/processes/discovery-process.md": {
+      "title": "Discovery process and expectations",
+      "type": "guide",
+      "scope": "project",
+      "summary": "Guide for discovery phase work covering knowledge gathering, spec creation, and expected behaviors",
+      "keywords": [
+        "discovery",
+        "spec",
+        "documentation",
+        "process",
+        "expectations",
+        "knowledge-management"
+      ]
+    },
+
+    "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md": {
+      "title": "Multi-tenant DynamoDB conventions",
+      "type": "standard",
+      "scope": "framework",
+      "summary": "Patterns and standards for multi-tenant DynamoDB tables — table organization, naming, key patterns, standard entity attributes, GSI conventions, cross-table references, module table template",
+      "keywords": [
+        "dynamodb",
+        "multi-tenant",
+        "single-table",
+        "key-design",
+        "gsi",
+        "conventions",
+        "tenant",
+        "entity-attributes"
+      ],
+      "related": [
+        "docs/framework/standards/database/dynamodb/README.md",
+        "docs/xtnd/hld/platform/xtnd-tenant-table.md",
+        "docs/xtnd/hld/platform/xtnd-setting-table.md",
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md"
+      ]
+    },
+
+    "docs/xtnd/hld/heartwood/iam-foundation.md": {
+      "title": "IAM Architecture Foundation (overview index)",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "Overview index for Heartwood tenant IAM — decision summary, document map linking to child docs, package structure, decision log",
+      "keywords": ["iam", "heartwood", "overview", "decisions"],
+      "related": [
+        "docs/xtnd/hld/heartwood/iam-identity-model.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+        "docs/xtnd/hld/heartwood/iam-permission-model.md",
+        "docs/xtnd/hld/heartwood/iam-authorization.md",
+        "docs/xtnd/hld/heartwood/iam-data-lifecycle.md",
+        "docs/xtnd/hld/heartwood/user-pool-architecture.md",
+        "docs/xtnd/decisions/ADR-001-three-pool-user-directory.md"
+      ]
+    },
+
+    "docs/xtnd/hld/heartwood/iam-identity-model.md": {
+      "title": "IAM identity model",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "Platform-managed federation model, identity lifecycle, invite-first + JIT fallback provisioning, 3-pool Cognito topology, tenant pool config, Pre Token Gen Lambda with groups in JWT",
+      "keywords": [
+        "iam",
+        "authentication",
+        "cognito",
+        "identity",
+        "federation",
+        "oauth",
+        "invite",
+        "heartwood",
+        "pre-token-gen"
+      ],
+      "related": [
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/user-pool-architecture.md",
+        "docs/xtnd/decisions/ADR-001-three-pool-user-directory.md"
+      ]
+    },
+
+    "docs/xtnd/hld/heartwood/heartwood-iam-table.md": {
+      "title": "heartwood-iam table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB schema for heartwood-iam table — User (with groupIds SS), Group (with roleIds SS), Role, tenant-custom Permission Set; denormalized access patterns, hot path resolution (2-3 constant ops), multi-table IAM architecture",
+      "keywords": [
+        "iam",
+        "dynamodb",
+        "table-design",
+        "heartwood",
+        "schema",
+        "user",
+        "role",
+        "permission",
+        "key-design",
+        "gsi",
+        "group",
+        "permission-set",
+        "string-set",
+        "denormalized"
+      ],
+      "related": [
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/canopy/canopy-iam-table.md",
+        "docs/xtnd/hld/platform/xtnd-tenant-table.md",
+        "docs/xtnd/hld/platform/xtnd-setting-table.md",
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md"
+      ]
+    },
+
+    "docs/xtnd/hld/heartwood/iam-permission-model.md": {
+      "title": "IAM permission model",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "IoC-compliant CASL design: open Subject type, Action constants, per-module shared/casl/ with subjects, permission maps, and CapabilityModule registration; permission sets (system from code, tenant-custom from DynamoDB), action hierarchy, group-based role assignment, ability factory, rule delivery",
+      "keywords": [
+        "iam",
+        "authorization",
+        "casl",
+        "rbac",
+        "roles",
+        "permissions",
+        "heartwood",
+        "jwt",
+        "caching",
+        "capability",
+        "permission-set",
+        "group",
+        "capability-registry",
+        "capability-module",
+        "permission-map",
+        "subject",
+        "action",
+        "async-context"
+      ],
+      "related": [
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/iam-authorization.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md"
+      ]
+    },
+
+    "docs/xtnd/hld/heartwood/iam-authorization.md": {
+      "title": "IAM authorization",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "Runtime guards with Principal, Scope, ExecutionContext via AsyncLocalStorage; BaseAuthGuard (JWT + Principal + ability + setExecutionContext); use cases consume via getExecutionContext(); worker flow with SERVICE principal; testing patterns",
+      "keywords": [
+        "iam",
+        "authorization",
+        "guard",
+        "nestjs",
+        "jwt",
+        "heartwood",
+        "multi-tenant",
+        "casl",
+        "principal",
+        "identity-context",
+        "async-context",
+        "scope"
+      ],
+      "related": [
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/iam-permission-model.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md"
+      ]
+    },
+
+    "docs/xtnd/hld/heartwood/iam-data-lifecycle.md": {
+      "title": "IAM data lifecycle",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "Data population steps (code registry for capabilities, denormalized bootstrap with SS attributes, provisioning via xtnd-setting), cross-reference dependency map, cascade rules (SS mutations, no junction cleanup), propagation windows",
+      "keywords": [
+        "iam",
+        "data-lifecycle",
+        "cascade",
+        "provisioning",
+        "heartwood",
+        "dynamodb",
+        "dependency",
+        "propagation",
+        "string-set",
+        "denormalized"
+      ],
+      "related": [
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+        "docs/xtnd/hld/platform/xtnd-tenant-table.md",
+        "docs/xtnd/hld/platform/xtnd-setting-table.md",
+        "docs/xtnd/hld/platform/data-walkthrough.md"
+      ]
+    },
+
+    "docs/xtnd/hld/canopy/canopy-iam-table.md": {
+      "title": "canopy-iam table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB schema for canopy-iam table — admin operators (with groupIds SS), admin groups (with roleIds SS), admin roles; PK: PLATFORM; uniform entity schema per D19; 2-operation resolution chain (all permission sets from code registry)",
+      "keywords": [
+        "iam",
+        "dynamodb",
+        "table-design",
+        "canopy",
+        "admin",
+        "schema",
+        "operator",
+        "platform",
+        "string-set"
+      ],
+      "related": [
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+        "docs/xtnd/architecture/xtnd-iam-architecture.md"
+      ]
+    },
+
+    "docs/xtnd/hld/platform/xtnd-tenant-table.md": {
+      "title": "xtnd-tenant table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB table design for tenant data — profile, contacts, licensing, domains, service configs. Single-table with GSI1 for domain/alias resolution",
+      "keywords": [
+        "tenant",
+        "dynamodb",
+        "table-design",
+        "domain-resolution",
+        "licensing",
+        "profile",
+        "multi-tenant"
+      ],
+      "related": [
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md"
+      ]
+    },
+
+    "docs/xtnd/hld/platform/xtnd-setting-table.md": {
+      "title": "xtnd-setting table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB table design for cross-cutting settings with three-level inheritance — platform defaults, tenant overrides, user preferences",
+      "keywords": [
+        "settings",
+        "preferences",
+        "dynamodb",
+        "table-design",
+        "configuration",
+        "inheritance",
+        "multi-tenant"
+      ],
+      "related": [
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+        "docs/xtnd/hld/platform/xtnd-tenant-table.md",
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md"
+      ]
+    },
+
+    "docs/xtnd/decisions/ADR-002-tenant-entity-ownership.md": {
+      "title": "ADR-002: Tenant entity ownership across bounded contexts",
+      "type": "adr",
+      "scope": "project",
+      "summary": "Decision on how Heartwood (console) and Canopy (admin) share tenant data — accepted shared tenant kernel (tenant-core) with symmetric consumers, tenant resolution in auth-core",
+      "keywords": [
+        "tenant",
+        "tenant-core",
+        "bounded-context",
+        "ownership",
+        "heartwood",
+        "canopy",
+        "ddd",
+        "shared-kernel",
+        "auth-core",
+        "domain-architecture"
+      ],
+      "related": [
+        "docs/xtnd/architecture/multi-audience-domain-architecture.md",
+        "docs/xtnd/decisions/ADR-001-three-pool-user-directory.md",
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+        "docs/xtnd/hld/heartwood/iam-data-lifecycle.md"
+      ]
+    },
+
+    "docs/xtnd/decisions/ADR-003-vendor-user-identity.md": {
+      "title": "ADR-003: Vendor user identity — Cognito as source of truth",
+      "type": "adr",
+      "scope": "project",
+      "summary": "Vendor users have no DynamoDB shadow table — identity lives in Cognito only. Vendor user (person) is distinct from vendor record (company profile). Vendor users are cross-tenant with per-request tenant context. Future triggers for adding shadow table documented.",
+      "keywords": [
+        "vendor",
+        "vendor-user",
+        "cognito",
+        "identity",
+        "sycamore",
+        "shadow-table",
+        "iam",
+        "portal",
+        "cross-tenant"
+      ],
+      "related": [
+        "docs/xtnd/decisions/ADR-001-three-pool-user-directory.md",
+        "docs/xtnd/decisions/ADR-002-tenant-entity-ownership.md",
+        "docs/xtnd/architecture/xtnd-iam-architecture.md",
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/user-pool-architecture.md"
+      ]
+    },
+
+    "docs/xtnd/hld/banyan/database/case-management-tables.md": {
+      "title": "Banyan case management table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB table design for Client, Matter, Activity, UTBMS (sets + codes) entities — access patterns, key design, entity schemas, sample data",
+      "keywords": [
+        "banyan",
+        "dynamodb",
+        "table-design",
+        "client",
+        "matter",
+        "activity",
+        "utbms",
+        "billing-codes",
+        "case-management",
+        "clio",
+        "multi-tenant",
+        "cdm"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+        "docs/xtnd/hld/banyan/database/legal-billing-tables.md"
+      ]
+    },
+
+    "docs/xtnd/hld/banyan/database/legal-billing-tables.md": {
+      "title": "Banyan legal billing table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB table design for Bill + LineItem using hierarchical sort key — single-table parent-child pattern",
+      "keywords": [
+        "banyan",
+        "dynamodb",
+        "table-design",
+        "bill",
+        "line-item",
+        "legal-billing",
+        "clio",
+        "hierarchical-sk",
+        "multi-tenant",
+        "cdm"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+        "docs/xtnd/hld/banyan/database/case-management-tables.md"
+      ]
+    },
+
+    "docs/xtnd/hld/banyan/database/financial-tables.md": {
+      "title": "Banyan financial table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB table design for Account, Invoice, JournalEntry entities — QBO accounting data with inline line items",
+      "keywords": [
+        "banyan",
+        "dynamodb",
+        "table-design",
+        "account",
+        "invoice",
+        "journal-entry",
+        "financial",
+        "qbo",
+        "quickbooks",
+        "multi-tenant",
+        "cdm"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+        "docs/xtnd/hld/banyan/database/legal-billing-tables.md"
+      ]
+    },
+
+    "docs/xtnd/hld/banyan/database/banking-tables.md": {
+      "title": "Banyan banking table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB table design for BankAccount, BankTransaction, Allocation entities — trust accounts, trust activity, fund allocation",
+      "keywords": [
+        "banyan",
+        "dynamodb",
+        "table-design",
+        "bank-account",
+        "bank-transaction",
+        "allocation",
+        "trust",
+        "banking",
+        "clio",
+        "multi-tenant",
+        "cdm"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+        "docs/xtnd/hld/banyan/database/case-management-tables.md"
+      ]
+    },
+
+    "docs/xtnd/hld/banyan/database/infrastructure-tables.md": {
+      "title": "Banyan infrastructure table design",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "DynamoDB table design for sync-state, event-ledger, idempotency, connection, webhook-registry — operational tables for sync infrastructure",
+      "keywords": [
+        "banyan",
+        "dynamodb",
+        "table-design",
+        "sync-state",
+        "event-ledger",
+        "idempotency",
+        "connection",
+        "webhook",
+        "infrastructure",
+        "multi-tenant",
+        "circuit-breaker"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/architecture/overview.md",
+        "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+        "docs/xtnd/hld/data-warehouse/README.md"
+      ]
+    },
+
+    "docs/xtnd/hld/banyan/database/entity-model.md": {
+      "title": "Entity model and ownership",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "Three-tier entity ownership model (Heartwood → Banyan CDM → Modules), CDM and module entity inventory, dependency matrix, entity relationship diagram.",
+      "keywords": [
+        "banyan",
+        "entity",
+        "hierarchy",
+        "ownership",
+        "cdm",
+        "domain-model",
+        "cross-module"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/specs/cross-module-references.md",
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/xtnd/hld/banyan/architecture/overview.md"
+      ]
+    },
+
+    "docs/xtnd/hld/banyan/specs/cross-module-references.md": {
+      "title": "Cross-module entity references",
+      "type": "spec",
+      "scope": "project",
+      "summary": "Reference patterns (5), anti-patterns (4), resolution strategies (query service, event hydration, projections), event-driven relationships, import guidelines for cross-module CDM consumption.",
+      "keywords": [
+        "banyan",
+        "entity",
+        "reference-patterns",
+        "cross-module",
+        "events",
+        "anti-patterns",
+        "imports"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/database/entity-model.md",
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/xtnd/hld/banyan/database/case-management-tables.md"
+      ]
+    },
+
+    "docs/xtnd/hld/data-warehouse/README.md": {
+      "title": "Data pipeline — Redshift data warehouse",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "Data replication pipeline — DynamoDB Streams to Kinesis, S3, Redshift for tenant analytics",
+      "keywords": [
+        "banyan",
+        "data-warehouse",
+        "cdc",
+        "dynamodb-streams",
+        "redshift",
+        "kinesis",
+        "firehose",
+        "data-warehouse",
+        "replication"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/architecture/overview.md",
+        "docs/xtnd/hld/banyan/database/infrastructure-tables.md",
+        "docs/xtnd/hld/data-warehouse/specs/data-replication-engine.md",
+        "docs/xtnd/hld/search-service/README.md"
+      ]
+    },
+
+    "docs/xtnd/hld/search-service/README.md": {
+      "title": "Search service — OpenSearch indexing and retrieval",
+      "type": "architecture",
+      "scope": "project",
+      "summary": "OpenSearch-based indexing and full-text search — DynamoDB Streams CDC to OpenSearch for real-time search",
+      "keywords": [
+        "banyan",
+        "search",
+        "opensearch",
+        "indexing",
+        "full-text-search",
+        "autocomplete",
+        "cdc",
+        "dynamodb-streams"
+      ],
+      "related": [
+        "docs/xtnd/hld/banyan/architecture/overview.md",
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/xtnd/hld/search-service/specs/opensearch-indexing.md",
+        "docs/xtnd/hld/data-warehouse/README.md"
+      ]
+    }
+  },
+
+  "context_groups": {
+    "frontend-development": {
+      "description": "Context for frontend development with Next.js and React",
+      "trigger_keywords": [
+        "react",
+        "next",
+        "nextjs",
+        "component",
+        "ui",
+        "page",
+        "layout",
+        "frontend",
+        "primitive",
+        "wrapper",
+        "cva"
+      ],
+      "documents": [
+        "docs/framework/standards/typescript/README.md",
+        "docs/framework/standards/typescript/01-general-language.md",
+        "docs/framework/standards/nextjs/README.md",
+        "docs/framework/standards/tailwind/README.md",
+        "docs/framework/standards/uiux/component-guidelines.md",
+        "docs/framework/architectures/frontend/README.md",
+        "docs/framework/architectures/frontend/foundation.md",
+        "docs/framework/architectures/frontend/data-layer.md",
+        "docs/framework/architectures/adrs/fe-framework.md",
+        "docs/framework/architectures/adrs/fe-state-management.md"
+      ]
+    },
+
+    "backend-development": {
+      "description": "Context for backend development with NestJS and Node.js",
+      "trigger_keywords": [
+        "api",
+        "service",
+        "controller",
+        "nest",
+        "nestjs",
+        "lambda",
+        "backend",
+        "endpoint"
+      ],
+      "documents": [
+        "docs/framework/standards/typescript/README.md",
+        "docs/framework/standards/nodejs/README.md",
+        "docs/framework/standards/nestjs/README.md",
+        "docs/framework/architectures/backend/README.md",
+        "docs/framework/architectures/backend/overview.md",
+        "docs/framework/architectures/backend/components.md",
+        "docs/framework/architectures/adrs/be-framework.md",
+        "docs/specs/nestjs-o11y.md",
+        "docs/specs/lambda-handler.md"
+      ]
+    },
+
+    "monorepo-nx": {
+      "description": "Context for Nx monorepo structure and conventions",
+      "trigger_keywords": [
+        "nx",
+        "monorepo",
+        "workspace",
+        "library",
+        "package",
+        "module",
+        "boundary"
+      ],
+      "documents": [
+        "docs/framework/architectures/monorepo/README.md",
+        "docs/framework/architectures/monorepo/principles.md",
+        "docs/framework/architectures/monorepo/layout/README.md",
+        "docs/framework/architectures/monorepo/layout/02-domain-template.md",
+        "docs/framework/architectures/monorepo/domain-modules.md",
+        "docs/framework/architectures/monorepo/extension-guide.md",
+        "docs/practices/source-control-management.md"
+      ]
+    },
+
+    "authentication-identity": {
+      "description": "Context for authentication, authorization, and identity management",
+      "trigger_keywords": [
+        "auth",
+        "authentication",
+        "authorization",
+        "identity",
+        "sso",
+        "oauth",
+        "jwt",
+        "login",
+        "cognito",
+        "casl",
+        "rbac",
+        "roles",
+        "permissions",
+        "heartwood",
+        "iam",
+        "tenant-core",
+        "auth-core",
+        "principal",
+        "identity-context",
+        "async-context",
+        "canopy-iam",
+        "capability-registry",
+        "vendor",
+        "vendor-user",
+        "sycamore"
+      ],
+      "documents": [
+        "docs/framework/playbooks/identity-access.md",
+        "docs/framework/architectures/backend/identity-directory.md",
+        "docs/framework/architectures/adrs/fe-auth.md",
+        "docs/framework/playbooks/multi-tenancy.md",
+        "docs/xtnd/architecture/xtnd-iam-architecture.md",
+        "docs/xtnd/hld/heartwood/iam-foundation.md",
+        "docs/xtnd/hld/heartwood/iam-identity-model.md",
+        "docs/xtnd/hld/heartwood/iam-permission-model.md",
+        "docs/xtnd/hld/heartwood/iam-authorization.md",
+        "docs/xtnd/hld/canopy/canopy-iam-table.md",
+        "docs/xtnd/decisions/ADR-003-vendor-user-identity.md"
+      ]
+    },
+
+    "infrastructure-deployment": {
+      "description": "Context for infrastructure, deployment, and DevOps",
+      "trigger_keywords": [
+        "deploy",
+        "deployment",
+        "infrastructure",
+        "aws",
+        "cdk",
+        "terraform",
+        "ci",
+        "cd",
+        "pipeline"
+      ],
+      "documents": [
+        "docs/framework/playbooks/deployment-models.md",
+        "docs/framework/playbooks/devsecops-sdlc.md",
+        "docs/framework/devsecops/README.md",
+        "docs/framework/devsecops/01-infrastructure-as-code.md",
+        "docs/framework/devsecops/02-ci-cd-pipelines.md",
+        "docs/framework/architectures/adrs/be-cloud.md",
+        "docs/framework/architectures/adrs/be-iac.md"
+      ]
+    },
+
+    "observability-monitoring": {
+      "description": "Context for observability, monitoring, and SRE practices",
+      "trigger_keywords": [
+        "observability",
+        "monitoring",
+        "logging",
+        "metrics",
+        "tracing",
+        "alerts",
+        "slo",
+        "sli",
+        "o11y",
+        "health"
+      ],
+      "documents": [
+        "docs/specs/observability-libraries.md",
+        "docs/specs/logging-libraries.md",
+        "docs/specs/tracing-libraries.md",
+        "docs/specs/health-libraries.md",
+        "docs/specs/nestjs-o11y.md",
+        "docs/framework/playbooks/observability-sre.md",
+        "docs/framework/architectures/frontend/operations/observability.md",
+        "docs/framework/playbooks/resilience-dr.md",
+        "docs/framework/devsecops/04-observability.md",
+        "docs/framework/cross-cutting/logging/README.md"
+      ]
+    },
+
+    "testing": {
+      "description": "Context for testing strategies and tooling",
+      "trigger_keywords": [
+        "test",
+        "testing",
+        "jest",
+        "cypress",
+        "playwright",
+        "unit",
+        "integration",
+        "e2e"
+      ],
+      "documents": [
+        "docs/practices/testing-strategy.md",
+        "docs/framework/architectures/frontend/quality.md",
+        "docs/framework/architectures/adrs/fe-testing-toolchain.md",
+        "docs/framework/standards/typescript/05-security-performance.md"
+      ]
+    },
+
+    "api-testing": {
+      "description": "Context for API testing with Bruno",
+      "trigger_keywords": [
+        "bruno",
+        "api-testing",
+        "api-test",
+        "bru",
+        "api-collection",
+        "api-client"
+      ],
+      "documents": [
+        "docs/practices/api-testing.md",
+        "tools/bruno/docs/design-notes.md",
+        "tools/bruno/docs/request-conventions.md",
+        "tools/bruno/docs/workflow.md"
+      ]
+    },
+
+    "engineering-processes": {
+      "description": "Context for engineering workflows, code review, onboarding, and team processes",
+      "trigger_keywords": [
+        "review",
+        "onboarding",
+        "process",
+        "workflow",
+        "dependency",
+        "dependencies",
+        "pr",
+        "pull-request",
+        "debt",
+        "refactor"
+      ],
+      "documents": [
+        "docs/practices/code-review.md",
+        "docs/processes/onboarding.md",
+        "docs/practices/testing-strategy.md",
+        "docs/practices/dependency-management.md",
+        "docs/practices/technical-debt.md",
+        "docs/practices/git-workflow.md"
+      ]
+    },
+
+    "data-storage": {
+      "description": "Context for data storage and database decisions",
+      "trigger_keywords": [
+        "database",
+        "storage",
+        "data",
+        "sql",
+        "nosql",
+        "dynamodb",
+        "postgres",
+        "redis",
+        "opensearch"
+      ],
+      "documents": [
+        "docs/framework/playbooks/storage-data.md",
+        "docs/framework/playbooks/multi-tenancy.md",
+        "docs/framework/standards/database/README.md",
+        "docs/framework/standards/database/postgresql/README.md",
+        "docs/framework/standards/database/dynamodb/README.md",
+        "docs/framework/standards/database/opensearch/README.md"
+      ]
+    },
+
+    "security": {
+      "description": "Context for security practices and compliance",
+      "trigger_keywords": [
+        "security",
+        "secure",
+        "vulnerability",
+        "encryption",
+        "compliance",
+        "audit"
+      ],
+      "documents": [
+        "docs/framework/standards/typescript/05-security-performance.md",
+        "docs/framework/playbooks/devsecops-sdlc.md",
+        "docs/framework/playbooks/compliance-governance.md",
+        "docs/framework/playbooks/identity-access.md",
+        "docs/framework/devsecops/03-security-practices.md"
+      ]
+    },
+
+    "event-driven": {
+      "description": "Context for event-driven architecture patterns",
+      "trigger_keywords": [
+        "event",
+        "events",
+        "eda",
+        "saga",
+        "workflow",
+        "sns",
+        "sqs",
+        "eventbridge",
+        "dlq",
+        "outbox",
+        "replay"
+      ],
+      "documents": [
+        "docs/framework/architectures/backend/event-driven/README.md",
+        "docs/framework/architectures/backend/event-driven/01-event-types.md",
+        "docs/framework/architectures/backend/event-driven/02-event-envelope.md",
+        "docs/framework/architectures/backend/event-driven/04-publishing-consuming.md",
+        "docs/framework/architectures/backend/event-driven/06-workflows-sagas.md",
+        "docs/framework/architectures/backend/event-driven/07-reliability.md",
+        "docs/framework/architectures/backend/event-driven/09-transport-evaluation.md",
+        "docs/framework/architectures/backend/event-driven/10-best-practices.md",
+        "docs/framework/architectures/backend/event-driven/11-local-development.md",
+        "docs/framework/architectures/backend/event-driven/12-operations-runbook.md",
+        "docs/framework/architectures/adrs/eda-aws-native.md"
+      ]
+    },
+
+    "error-handling": {
+      "description": "Context for error handling patterns",
+      "trigger_keywords": [
+        "error",
+        "errors",
+        "exception",
+        "handling",
+        "error-handling"
+      ],
+      "documents": [
+        "docs/framework/cross-cutting/error-handling/README.md",
+        "docs/framework/architectures/frontend/operations/error-shapes.md",
+        "docs/framework/architectures/frontend/operations/handling-patterns.md",
+        "docs/framework/standards/typescript/error-codes.md"
+      ]
+    },
+
+    "aws": {
+      "description": "Context for AWS-specific standards and patterns",
+      "trigger_keywords": [
+        "aws",
+        "lambda",
+        "s3",
+        "dynamodb",
+        "rds",
+        "cloudwatch",
+        "iam"
+      ],
+      "documents": [
+        "docs/framework/standards/aws/README.md",
+        "docs/framework/architectures/adrs/be-cloud.md",
+        "docs/framework/architectures/adrs/be-iac.md",
+        "docs/framework/playbooks/deployment-models.md"
+      ]
+    },
+
+    "banyan-integration": {
+      "description": "Context for Banyan adapter framework, data sync, and canonical data model",
+      "trigger_keywords": [
+        "banyan",
+        "adapter",
+        "sync",
+        "clio",
+        "qbo",
+        "quickbooks",
+        "cdm",
+        "canonical",
+        "integration",
+        "webhook",
+        "trust",
+        "bill",
+        "invoice",
+        "matter",
+        "client"
+      ],
+      "documents": [
+        "docs/xtnd/hld/banyan/README.md",
+        "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+        "docs/xtnd/hld/banyan/architecture/overview.md",
+        "docs/xtnd/hld/banyan/database/entity-model.md",
+        "docs/xtnd/hld/banyan/specs/cross-module-references.md",
+        "docs/xtnd/hld/banyan/database/case-management-tables.md",
+        "docs/xtnd/hld/banyan/database/legal-billing-tables.md",
+        "docs/xtnd/hld/banyan/database/financial-tables.md",
+        "docs/xtnd/hld/banyan/database/banking-tables.md",
+        "docs/xtnd/hld/banyan/database/infrastructure-tables.md",
+        "docs/xtnd/hld/data-warehouse/README.md"
+      ]
+    }
+  },
+
+  "keyword_index": {
+    "typescript": [
+      "docs/framework/standards/typescript/README.md",
+      "docs/framework/standards/typescript/01-general-language.md",
+      "docs/framework/standards/typescript/02-language-features.md"
+    ],
+    "nextjs": [
+      "docs/framework/standards/nextjs/README.md",
+      "docs/framework/architectures/frontend/README.md",
+      "docs/framework/architectures/adrs/fe-framework.md"
+    ],
+    "nestjs": [
+      "docs/framework/standards/nestjs/README.md",
+      "docs/framework/architectures/backend/README.md",
+      "docs/framework/architectures/adrs/be-framework.md"
+    ],
+    "nx": [
+      "docs/framework/architectures/monorepo/README.md",
+      "docs/framework/architectures/monorepo/principles.md",
+      "docs/framework/architectures/monorepo/layout/README.md"
+    ],
+    "monorepo": [
+      "docs/framework/architectures/monorepo/README.md",
+      "docs/practices/source-control-management.md"
+    ],
+    "authentication": [
+      "docs/framework/playbooks/identity-access.md",
+      "docs/framework/architectures/backend/identity-directory.md",
+      "docs/framework/architectures/adrs/fe-auth.md",
+      "docs/xtnd/hld/heartwood/iam-foundation.md",
+      "docs/xtnd/hld/heartwood/iam-identity-model.md"
+    ],
+    "iam": [
+      "docs/xtnd/architecture/xtnd-iam-architecture.md",
+      "docs/xtnd/hld/heartwood/iam-foundation.md",
+      "docs/xtnd/hld/heartwood/iam-identity-model.md",
+      "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+      "docs/xtnd/hld/canopy/canopy-iam-table.md",
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/iam-authorization.md",
+      "docs/xtnd/hld/heartwood/iam-data-lifecycle.md",
+      "docs/xtnd/decisions/ADR-003-vendor-user-identity.md",
+      "docs/framework/architectures/backend/identity-directory.md"
+    ],
+    "cognito": [
+      "docs/xtnd/hld/heartwood/iam-identity-model.md",
+      "docs/xtnd/hld/heartwood/iam-foundation.md",
+      "docs/xtnd/decisions/ADR-003-vendor-user-identity.md"
+    ],
+    "casl": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/iam-authorization.md"
+    ],
+    "rbac": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/iam-authorization.md"
+    ],
+    "heartwood": [
+      "docs/xtnd/hld/heartwood/iam-foundation.md",
+      "docs/xtnd/hld/heartwood/iam-identity-model.md",
+      "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/iam-authorization.md",
+      "docs/xtnd/hld/heartwood/iam-data-lifecycle.md"
+    ],
+    "guard": ["docs/xtnd/hld/heartwood/iam-authorization.md"],
+    "cascade": ["docs/xtnd/hld/heartwood/iam-data-lifecycle.md"],
+    "capability": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+      "docs/xtnd/hld/heartwood/iam-data-lifecycle.md"
+    ],
+    "permission-set": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+      "docs/xtnd/hld/heartwood/iam-data-lifecycle.md"
+    ],
+    "group": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/heartwood-iam-table.md",
+      "docs/xtnd/hld/heartwood/iam-identity-model.md",
+      "docs/xtnd/hld/heartwood/iam-data-lifecycle.md"
+    ],
+    "tenant-core": [
+      "docs/xtnd/decisions/ADR-002-tenant-entity-ownership.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md",
+      "docs/xtnd/architecture/multi-audience-domain-architecture.md"
+    ],
+    "auth-core": [
+      "docs/xtnd/architecture/xtnd-iam-architecture.md",
+      "docs/xtnd/architecture/multi-audience-domain-architecture.md",
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/hld/heartwood/iam-authorization.md"
+    ],
+    "async-context": [
+      "docs/xtnd/hld/heartwood/iam-authorization.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md"
+    ],
+    "principal": [
+      "docs/xtnd/hld/heartwood/iam-authorization.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md"
+    ],
+    "identity-context": [
+      "docs/xtnd/hld/heartwood/iam-authorization.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md"
+    ],
+    "canopy-iam": [
+      "docs/xtnd/hld/canopy/canopy-iam-table.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md"
+    ],
+    "capability-registry": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md"
+    ],
+    "capability-module": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md"
+    ],
+    "permission-map": ["docs/xtnd/hld/heartwood/iam-permission-model.md"],
+    "subject": [
+      "docs/xtnd/hld/heartwood/iam-permission-model.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md"
+    ],
+    "action": ["docs/xtnd/hld/heartwood/iam-permission-model.md"],
+    "tenant": [
+      "docs/xtnd/hld/platform/xtnd-tenant-table.md",
+      "docs/xtnd/hld/heartwood/iam-foundation.md",
+      "docs/xtnd/hld/heartwood/iam-data-lifecycle.md",
+      "docs/xtnd/decisions/ADR-002-tenant-entity-ownership.md",
+      "docs/framework/playbooks/multi-tenancy.md"
+    ],
+    "bounded-context": [
+      "docs/xtnd/decisions/ADR-002-tenant-entity-ownership.md",
+      "docs/xtnd/architecture/multi-audience-domain-architecture.md"
+    ],
+    "vendor": [
+      "docs/xtnd/decisions/ADR-003-vendor-user-identity.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md",
+      "docs/xtnd/architecture/multi-audience-domain-architecture.md"
+    ],
+    "vendor-user": ["docs/xtnd/decisions/ADR-003-vendor-user-identity.md"],
+    "sycamore": [
+      "docs/xtnd/decisions/ADR-003-vendor-user-identity.md",
+      "docs/xtnd/architecture/xtnd-iam-architecture.md",
+      "docs/xtnd/architecture/multi-audience-domain-architecture.md"
+    ],
+    "settings": ["docs/xtnd/hld/platform/xtnd-setting-table.md"],
+    "preferences": ["docs/xtnd/hld/platform/xtnd-setting-table.md"],
+    "multi-tenant": [
+      "docs/framework/playbooks/multi-tenancy.md",
+      "docs/framework/architectures/backend/identity-directory.md",
+      "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+      "docs/xtnd/hld/platform/xtnd-tenant-table.md",
+      "docs/xtnd/hld/heartwood/iam-foundation.md",
+      "docs/xtnd/hld/heartwood/iam-authorization.md"
+    ],
+    "aws": [
+      "docs/framework/standards/aws/README.md",
+      "docs/framework/architectures/adrs/be-cloud.md",
+      "docs/framework/architectures/adrs/be-iac.md",
+      "docs/framework/playbooks/deployment-models.md"
+    ],
+    "serverless": [
+      "docs/specs/lambda-handler.md",
+      "docs/specs/nestjs-lambda.md",
+      "docs/framework/playbooks/deployment-models.md",
+      "docs/framework/architectures/adrs/be-framework.md"
+    ],
+    "lambda": [
+      "docs/specs/lambda-handler.md",
+      "docs/specs/nestjs-lambda.md",
+      "docs/framework/playbooks/deployment-models.md"
+    ],
+    "testing": [
+      "docs/practices/testing-strategy.md",
+      "docs/practices/api-testing.md",
+      "docs/framework/architectures/frontend/quality.md",
+      "docs/framework/architectures/adrs/fe-testing-toolchain.md"
+    ],
+    "bruno": [
+      "docs/practices/api-testing.md",
+      "tools/bruno/docs/design-notes.md",
+      "tools/bruno/docs/request-conventions.md",
+      "tools/bruno/docs/workflow.md"
+    ],
+    "api-testing": [
+      "docs/practices/api-testing.md",
+      "tools/bruno/docs/design-notes.md"
+    ],
+    "code-review": ["docs/practices/code-review.md"],
+    "onboarding": ["docs/processes/onboarding.md"],
+    "dependencies": [
+      "docs/practices/dependency-management.md",
+      "docs/framework/playbooks/devsecops-sdlc.md"
+    ],
+    "technical-debt": ["docs/practices/technical-debt.md"],
+    "refactoring": [
+      "docs/practices/technical-debt.md",
+      "docs/practices/code-review.md"
+    ],
+    "security": [
+      "docs/framework/standards/typescript/05-security-performance.md",
+      "docs/framework/playbooks/devsecops-sdlc.md",
+      "docs/framework/playbooks/compliance-governance.md",
+      "docs/framework/devsecops/03-security-practices.md"
+    ],
+    "observability": [
+      "docs/specs/observability-libraries.md",
+      "docs/specs/nestjs-o11y.md",
+      "docs/framework/playbooks/observability-sre.md",
+      "docs/framework/architectures/frontend/operations/observability.md",
+      "docs/framework/devsecops/04-observability.md"
+    ],
+    "state-management": [
+      "docs/framework/architectures/adrs/fe-state-management.md",
+      "docs/framework/architectures/frontend/data-layer.md"
+    ],
+    "rtk": [
+      "docs/framework/architectures/adrs/fe-state-management.md",
+      "docs/framework/architectures/frontend/data/state-management.md"
+    ],
+    "tailwind": [
+      "docs/framework/standards/tailwind/README.md",
+      "docs/framework/standards/tailwind/token-naming.md",
+      "docs/framework/standards/uiux/component-guidelines.md",
+      "docs/framework/architectures/adrs/fe-design-system.md",
+      "docs/specs/design-tokens-foundation.md"
+    ],
+    "design-system": [
+      "docs/framework/standards/uiux/README.md",
+      "docs/framework/standards/uiux/component-guidelines.md",
+      "docs/framework/architectures/adrs/fe-design-system.md",
+      "docs/specs/design-tokens-foundation.md"
+    ],
+    "ui-components": [
+      "docs/framework/standards/uiux/component-guidelines.md",
+      "docs/framework/architectures/monorepo/layout/04-ui-libs.md"
+    ],
+    "primitive": ["docs/framework/standards/uiux/component-guidelines.md"],
+    "wrapper": ["docs/framework/standards/uiux/component-guidelines.md"],
+    "cva": ["docs/framework/standards/uiux/component-guidelines.md"],
+    "radix": ["docs/framework/standards/uiux/component-guidelines.md"],
+    "design-tokens": [
+      "docs/specs/design-tokens-foundation.md",
+      "docs/framework/standards/tailwind/token-naming.md",
+      "docs/framework/architectures/monorepo/layout/04-ui-libs.md"
+    ],
+    "tokens": [
+      "docs/specs/design-tokens-foundation.md",
+      "docs/framework/standards/tailwind/token-naming.md"
+    ],
+    "themes": [
+      "docs/specs/design-tokens-foundation.md",
+      "docs/framework/standards/tailwind/token-naming.md"
+    ],
+    "error-handling": [
+      "docs/framework/cross-cutting/error-handling/README.md",
+      "docs/framework/architectures/frontend/operations/error-shapes.md",
+      "docs/framework/architectures/frontend/operations/handling-patterns.md"
+    ],
+    "deployment": [
+      "docs/framework/playbooks/deployment-models.md",
+      "docs/framework/playbooks/devsecops-sdlc.md",
+      "docs/framework/devsecops/02-ci-cd-pipelines.md"
+    ],
+    "resilience": [
+      "docs/framework/playbooks/resilience-dr.md",
+      "docs/framework/playbooks/design-principals.md"
+    ],
+    "git": ["docs/practices/git-workflow.md", "docs/practices/code-review.md"],
+    "patterns": [
+      "docs/framework/playbooks/architecture-patterns.md",
+      "docs/framework/playbooks/design-principals.md"
+    ],
+    "database": [
+      "docs/framework/standards/database/README.md",
+      "docs/framework/playbooks/storage-data.md"
+    ],
+    "postgresql": ["docs/framework/standards/database/postgresql/README.md"],
+    "dynamodb": [
+      "docs/framework/standards/database/dynamodb/README.md",
+      "docs/framework/standards/database/dynamodb/05-multi-tenant-conventions.md",
+      "docs/xtnd/hld/platform/xtnd-tenant-table.md",
+      "docs/xtnd/hld/platform/xtnd-setting-table.md"
+    ],
+    "opensearch": [
+      "docs/framework/standards/database/opensearch/README.md",
+      "docs/xtnd/hld/search-service/README.md",
+      "docs/xtnd/hld/search-service/specs/opensearch-indexing.md"
+    ],
+    "logging": [
+      "docs/specs/logging-libraries.md",
+      "docs/framework/cross-cutting/logging/README.md",
+      "docs/framework/playbooks/observability-sre.md"
+    ],
+    "tracing": [
+      "docs/specs/tracing-libraries.md",
+      "docs/specs/observability-libraries.md"
+    ],
+    "health": [
+      "docs/specs/health-libraries.md",
+      "docs/specs/observability-libraries.md"
+    ],
+    "o11y": [
+      "docs/specs/observability-libraries.md",
+      "docs/specs/nestjs-o11y.md",
+      "docs/specs/logging-libraries.md",
+      "docs/specs/tracing-libraries.md"
+    ],
+    "opentelemetry": [
+      "docs/specs/tracing-libraries.md",
+      "docs/specs/observability-libraries.md"
+    ],
+    "events": [
+      "docs/framework/architectures/backend/event-driven/README.md",
+      "docs/framework/architectures/backend/event-driven/01-event-types.md",
+      "docs/framework/architectures/backend/event-driven/10-best-practices.md"
+    ],
+    "eda": [
+      "docs/framework/architectures/backend/event-driven/README.md",
+      "docs/framework/architectures/backend/event-driven/10-best-practices.md",
+      "docs/framework/architectures/adrs/eda-aws-native.md"
+    ],
+    "saga": [
+      "docs/framework/architectures/backend/event-driven/06-workflows-sagas.md"
+    ],
+    "eventbridge": [
+      "docs/framework/architectures/backend/event-driven/09-transport-evaluation.md",
+      "docs/framework/architectures/backend/event-driven/10-best-practices.md",
+      "docs/framework/architectures/adrs/eda-aws-native.md"
+    ],
+    "sns": [
+      "docs/framework/architectures/backend/event-driven/09-transport-evaluation.md",
+      "docs/framework/architectures/backend/event-driven/10-best-practices.md",
+      "docs/framework/architectures/backend/event-driven/04-publishing-consuming.md"
+    ],
+    "sqs": [
+      "docs/framework/architectures/backend/event-driven/09-transport-evaluation.md",
+      "docs/framework/architectures/backend/event-driven/10-best-practices.md",
+      "docs/framework/architectures/backend/event-driven/04-publishing-consuming.md"
+    ],
+    "dlq": [
+      "docs/framework/architectures/backend/event-driven/07-reliability.md",
+      "docs/framework/architectures/backend/event-driven/12-operations-runbook.md"
+    ],
+    "replay": [
+      "docs/framework/architectures/backend/event-driven/07-reliability.md",
+      "docs/framework/architectures/backend/event-driven/12-operations-runbook.md"
+    ],
+    "localstack": [
+      "docs/framework/architectures/backend/event-driven/11-local-development.md"
+    ],
+    "runbook": [
+      "docs/framework/architectures/backend/event-driven/12-operations-runbook.md",
+      "docs/framework/devsecops/08-incident-response.md"
+    ],
+    "devsecops": [
+      "docs/framework/devsecops/README.md",
+      "docs/framework/playbooks/devsecops-sdlc.md"
+    ],
+    "ci-cd": [
+      "docs/framework/devsecops/02-ci-cd-pipelines.md",
+      "docs/framework/playbooks/devsecops-sdlc.md"
+    ],
+    "incident": ["docs/framework/devsecops/08-incident-response.md"],
+    "banyan": [
+      "docs/xtnd/hld/banyan/README.md",
+      "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+      "docs/xtnd/hld/banyan/architecture/overview.md",
+      "docs/xtnd/hld/banyan/database/entity-model.md",
+      "docs/xtnd/hld/banyan/specs/cross-module-references.md",
+      "docs/xtnd/hld/banyan/database/case-management-tables.md",
+      "docs/xtnd/hld/banyan/database/infrastructure-tables.md"
+    ],
+    "adapter": [
+      "docs/xtnd/hld/banyan/README.md",
+      "docs/xtnd/hld/banyan/specs/canonical-domain-model.md"
+    ],
+    "clio": [
+      "docs/xtnd/hld/banyan/database/case-management-tables.md",
+      "docs/xtnd/hld/banyan/database/legal-billing-tables.md",
+      "docs/xtnd/hld/banyan/database/banking-tables.md"
+    ],
+    "qbo": ["docs/xtnd/hld/banyan/database/financial-tables.md"],
+    "cdm": [
+      "docs/xtnd/hld/banyan/specs/canonical-domain-model.md",
+      "docs/xtnd/hld/banyan/database/entity-model.md",
+      "docs/xtnd/hld/banyan/database/case-management-tables.md"
+    ],
+    "sync": [
+      "docs/xtnd/hld/banyan/database/infrastructure-tables.md",
+      "docs/xtnd/hld/banyan/architecture/overview.md"
+    ],
+    "data-warehouse": [
+      "docs/xtnd/hld/data-warehouse/README.md",
+      "docs/xtnd/hld/data-warehouse/specs/data-replication-engine.md"
+    ],
+    "search": [
+      "docs/xtnd/hld/search-service/README.md",
+      "docs/xtnd/hld/search-service/specs/opensearch-indexing.md"
+    ]
+  }
+}
