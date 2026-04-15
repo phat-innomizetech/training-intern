@@ -71,9 +71,7 @@ apps/
 
 libs/
   shared-types/ ← TypeScript interfaces, DTOs, RBAC Role Enums
-  auth/         ← Better Auth config, session handlers, constants
   config/       ← Environment variables, workspace-wide constants
-  database/     ← Prisma schema, generated client (single source of truth)
   utils/        ← Shared helpers (validation, date formatting, etc.)
 ```
 

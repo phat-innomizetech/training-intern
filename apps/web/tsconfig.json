@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "allowArbitraryExtensions": true,
     "jsx": "preserve",
     "noEmit": true,
     "emitDeclarationOnly": false,
@@ -22,9 +23,7 @@
       "@/*": ["./src/*"]
     },
     "types": ["jest", "node"],
-    "outDir": "dist",
-    "rootDir": "src",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
+    "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": [
     "src/**/*.ts",
@@ -33,7 +32,10 @@
     "src/**/*.jsx",
     "../../apps/web/.next/types/**/*.ts",
     "../../dist/apps/web/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts"
   ],
   "exclude": [
     "out-tsc",
