@@ -87,4 +87,5 @@ Before marking work complete:
 - [ ] No deep nesting (>4 levels)
 - [ ] Proper error handling
 - [ ] No hardcoded values (use constants or config)
+- [ ] No hardcoded error messages (use constants or i18n)
 - [ ] No mutation (immutable patterns used)

@@ -105,7 +105,6 @@ These rules are **always active** and must not be violated:
 |---|---|
 | `common/coding-style.md` | Immutability, KISS/DRY/YAGNI, file organization, naming |
 | `common/security.md` | No hardcoded secrets, input validation, SQL injection prevention |
-| `common/testing.md` | 80% minimum coverage, TDD workflow (RED → GREEN → REFACTOR) |
 | `common/git-workflow.md` | Conventional commits, PR workflow |
 | `common/development-workflow.md` | Research → Plan → TDD → Review → Commit pipeline |
 | `common/code-review.md` | When and how to review, severity levels |
@@ -119,7 +118,6 @@ These rules are **always active** and must not be violated:
 | File | Scope |
 |---|---|
 | `typescript/coding-style.md` | Types, interfaces, `any` avoidance, immutability, error handling, Zod validation |
-| `typescript/testing.md` | Playwright for E2E, test framework choices |
 | `typescript/security.md` | Secret management patterns |
 | `typescript/patterns.md` | API response types, custom hooks, repository interface |
 | `typescript/hooks.md` | Prettier, TypeScript check, console.log warning |
@@ -162,7 +160,6 @@ Use these agents proactively. Do not wait to be asked:
 |---|---|
 | `planner.md` | Before any new feature — creates phased implementation plans |
 | `architect.md` | Architectural decisions, system design, trade-off analysis |
-| `tdd-guide.md` | New features, bug fixes — enforces RED → GREEN → REFACTOR |
 | `code-reviewer.md` | After writing or modifying any code |
 | `security-reviewer.md` | Auth code, API endpoints, user input handling, before any commit |
 | `typescript-reviewer.md` | All TypeScript/JavaScript changes |
@@ -185,7 +182,6 @@ Reference these for implementation guidance:
 | `database-migrations/SKILL.md` | Safe Prisma migrations, zero-downtime patterns, rollback strategy |
 | `docker-patterns/SKILL.md` | Docker Compose for local dev, multi-stage builds, container security |
 | `deployment-patterns/SKILL.md` | CI/CD pipelines, health checks, rollback, production checklist |
-| `e2e-testing/SKILL.md` | Playwright Page Object Model, flaky test handling, CI integration |
 | `everything-claude-code/SKILL.md` | Repo-specific commit conventions and workflow patterns |
 
 ---
@@ -202,19 +198,6 @@ Reference these for implementation guidance:
 
 ---
 
-## Running Tests
-
-```bash
-# Run all tests
-node tests/run-all.js
-
-# Run individual test files
-node tests/lib/utils.test.js
-node tests/lib/package-manager.test.js
-node tests/hooks/hooks.test.js
-```
-
----
 
 ## Key Conventions
 
