@@ -255,10 +255,10 @@ jobs:
 
 ```
 PR opened:
-  lint → typecheck → unit tests → integration tests → preview deploy
+  lint → typecheck → preview deploy
 
 Merged to main:
-  lint → typecheck → unit tests → integration tests → build image → deploy staging → smoke tests → deploy production
+  lint → typecheck → build image → deploy staging → smoke tests → deploy production
 ```
 
 ## Health Checks
@@ -394,7 +394,6 @@ npx prisma migrate resolve --rolled-back <migration-name>
 Before any production deployment:
 
 ### Application
-- [ ] All tests pass (unit, integration, E2E)
 - [ ] No hardcoded secrets in code or config files
 - [ ] Error handling covers all edge cases
 - [ ] Logging is structured (JSON) and does not contain PII

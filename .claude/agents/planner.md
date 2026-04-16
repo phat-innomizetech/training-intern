@@ -74,11 +74,6 @@ Create detailed steps with:
 ### Phase 2: [Phase Name]
 ...
 
-## Testing Strategy
-- Unit tests: [files to test]
-- Integration tests: [flows to test]
-- E2E tests: [user journeys to test]
-
 ## Risks & Mitigations
 - **Risk**: [Description]
   - Mitigation: [How to address]
@@ -157,11 +152,6 @@ Stripe Checkout, and webhook events keep subscription status in sync.
    - Why: Enforce tier limits server-side
    - Dependencies: Steps 1-2 (needs subscription data)
    - Risk: Medium — must handle edge cases (expired, past_due)
-
-## Testing Strategy
-- Unit tests: Webhook event parsing, tier checking logic
-- Integration tests: Checkout session creation, webhook processing
-- E2E tests: Full upgrade flow (Stripe test mode)
 
 ## Risks & Mitigations
 - **Risk**: Webhook events arrive out of order

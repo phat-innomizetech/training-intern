@@ -145,24 +145,6 @@ import { Button } from '../components/Button'
 import { useAuth } from './hooks/useAuth'
 ```
 
-## Testing
-
-### Test Framework
-
-No specific test framework detected — use the repository's existing test patterns.
-
-### File Pattern: `*.test.js`
-
-### Test Types
-
-- **Unit tests**: Test individual functions and components in isolation
-- **Integration tests**: Test interactions between multiple components/services
-
-### Coverage
-
-This project has coverage reporting configured. Aim for 80%+ coverage.
-
-
 ## Error Handling
 
 ### Error Handling Style: Try-Catch Blocks
