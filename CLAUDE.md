@@ -106,7 +106,7 @@ These rules are **always active** and must not be violated:
 | `common/coding-style.md` | Immutability, KISS/DRY/YAGNI, file organization, naming |
 | `common/security.md` | No hardcoded secrets, input validation, SQL injection prevention |
 | `common/git-workflow.md` | Conventional commits, PR workflow |
-| `common/development-workflow.md` | Research → Plan → TDD → Review → Commit pipeline |
+| `common/development-workflow.md` | Research → Plan → Review → Commit pipeline |
 | `common/code-review.md` | When and how to review, severity levels |
 | `common/patterns.md` | Repository pattern, API response format |
 | `common/agents.md` | Agent delegation and parallel execution |
@@ -173,7 +173,6 @@ Reference these for implementation guidance:
 
 | Skill | When to Use |
 |---|---|
-| `tdd-workflow/SKILL.md` | Full TDD workflow with mocking patterns and coverage verification |
 | `security-review/SKILL.md` | OWASP Top 10 checklist, secrets management, input validation |
 | `security-review/cloud-infrastructure-security.md` | Cloud deployment, IAM, CI/CD security |
 | `backend-patterns/SKILL.md` | Repository pattern, service layer, middleware, caching, rate limiting |
@@ -191,7 +190,6 @@ Reference these for implementation guidance:
 | Command | Purpose |
 |---|---|
 | `plan.md` | `/plan` — Invoke planner agent, wait for confirmation before coding |
-| `tdd.md` | `/tdd` — TDD workflow (delegates to `tdd-workflow` skill) |
 | `feature-development.md` | `/feature-development` — Standard feature implementation scaffold |
 | `database-migration.md` | `/database-migration` — Database schema change workflow |
 | `add-language-rules.md` | `/add-language-rules` — Add new language rules to the system |
@@ -215,7 +213,6 @@ Reference these for implementation guidance:
 
 1. **Research** — Search existing implementations before writing new code
 2. **Plan** — Use `/plan` to create an implementation plan before touching code
-3. **TDD** — Write tests first (RED), implement (GREEN), refactor (IMPROVE)
 4. **Review** — Code reviewer agent runs after every change
 5. **Security check** — Security reviewer runs before any commit touching auth/API/input
 6. **Commit** — Conventional commit format with descriptive message
