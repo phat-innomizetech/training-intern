@@ -6,119 +6,147 @@ This project uses **Prisma ORM** with **PostgreSQL** as the primary database sol
 
 The database layer is designed to be:
 
-* Centralized
-* Consistent across the monorepo
+* Centralized inside the backend app (`apps/api`)
+* Consistent across all backend modules
 * Scalable for future extensions (RBAC, multi-tenant, auditing)
 
 ---
 
-## 2. Database Library (`libs/database`)
+## 2. Schema Location
 
-All database-related logic is centralized in a shared library:
+The Prisma schema is owned by the backend app:
 
-* **Schema Location**: `libs/database/prisma/schema.prisma`
-* **Purpose**:
+* **Schema location**: `apps/api/prisma/schema.prisma`
+* **Migrations location**: `apps/api/prisma/migrations/`
 
-  * Define all data models
-  * Manage migrations
-  * Provide a shared Prisma client
+### Why not in `libs/`?
 
-### Key Principle
+* Prisma is a **backend-only** concern; the frontend (`apps/web`) never touches the schema or client
+* Generated artifacts (Prisma client + migrations) belong with the app that owns them
+* `auth_rules.md` and `nestjs_architecture.md` both forbid placing backend infrastructure in `libs/`
+* Sharing Prisma via `libs/` would force the frontend to depend on `@prisma/client`, leaking server types into the browser bundle
 
-> The database layer acts as a **single source of truth** for all data models.
+### Single source of truth
+
+> The schema at `apps/api/prisma/schema.prisma` is the **single source of truth** for all data models. No other Prisma schema file may exist in the workspace.
 
 ---
 
-## 3. Data Modeling Guidelines
+## 3. PrismaClient Location (Backend Runtime)
+
+The runtime client lives under the NestJS app's `shared/infrastructure/` layer per `nestjs_architecture.md`:
+
+```
+apps/api/src/shared/infrastructure/database/
+├── prisma.ts            ← exported singleton PrismaClient (framework-free)
+└── prisma.service.ts    ← Nest-injectable PrismaService (OnModuleInit/Destroy)
+```
+
+### Why `shared/infrastructure/`?
+
+* Prisma is a **cross-module** infrastructure concern (used by `auth`, future `users`, etc.)
+* `nestjs_architecture.md` reserves `modules/<name>/` for module-scoped code and `shared/` for code reused across modules
+* Both `prisma.ts` (raw singleton) and `prisma.service.ts` (Nest-managed) coexist:
+  * `prisma.ts` is for module-load-time consumers like `auth.ts` (Better Auth needs the instance before DI runs)
+  * `prisma.service.ts` is for DI-friendly consumers (repositories, use cases)
+
+---
+
+## 4. Data Modeling Guidelines
 
 ### Naming Conventions
 
-* Models represent domain entities
-* Clear and consistent naming must be used across the system
+* Models represent domain entities (PascalCase)
+* Fields use camelCase
+* Tables map to snake_case via `@@map`
 
 ### Schema Design
 
 * Each model represents a database table
-* Relationships must be explicitly defined
+* Relationships MUST be explicitly defined
 * Avoid unnecessary complexity in schema design
 
 ### Auditing
 
-* All entities should support tracking changes over time
+* All non-Better-Auth-owned entities MUST include `createdAt` and `updatedAt`
+* Better Auth-owned models (`User`, `Session`, `Account`, `Verification`) follow the CLI-generated structure
 
 ---
 
-## 4. Layer Isolation & Access Control
+## 5. Layer Isolation & Access Control
 
 ### Backend (NestJS)
 
-* Prisma access is restricted to the **infrastructure layer**
-* Application and domain layers MUST NOT directly access Prisma
+* `PrismaClient` access is restricted to the **infrastructure** layer:
+  * `apps/api/src/shared/infrastructure/database/`
+  * `apps/api/src/modules/<module>/infrastructure/repositories/` (when implementing repository pattern)
+* Application layer MUST consume repository **interfaces**, never `PrismaClient` directly
+* Domain layer MUST NOT import `@prisma/client` at all
 
 ### Frontend (Next.js)
 
-* MUST NOT directly query the database for business logic
-* MUST use backend APIs for all secured operations
-
-### Exception
-
-* Read-only queries MAY be allowed in server-side execution (e.g., Server Actions)
-* These cases MUST ensure proper session validation
+* MUST NOT import `@prisma/client` under any circumstance
+* MUST use backend APIs for all data operations
 
 ---
 
-## 5. Authentication Integration (Better Auth)
+## 6. Authentication Integration (Better Auth)
 
-The database must support authentication and session management.
+The database supports authentication via Better Auth's official models:
 
-### Required Models
+### Required Models (CLI-generated)
 
 * `User`
 * `Session`
 * `Account`
 * `Verification`
 
-### Role Management
+### Allowed Modifications
 
-* User roles are stored in the database
-* Role field must be part of the User model
+* Add `Role` enum
+* Add `role` field on `User`
 
----
-
-## 6. Data Ownership & Boundaries
-
-| Layer           | Responsibility       |
-| --------------- | -------------------- |
-| Database        | Data persistence     |
-| Infrastructure  | Data access (Prisma) |
-| Application     | Business logic       |
-| Interface (API) | Data exposure        |
+See `spec/TI-31_integrate-prisma-adapter-better-auth.md` for the strict workflow.
 
 ---
 
-## 7. Migration Strategy
+## 7. Data Ownership & Boundaries
 
-* All schema changes MUST go through Prisma migrations
-* Migrations MUST be version-controlled
+| Layer           | Responsibility       | Path                                            |
+|-----------------|----------------------|-------------------------------------------------|
+| Database        | Data persistence     | PostgreSQL                                      |
+| Infrastructure  | Data access (Prisma) | `apps/api/src/shared/infrastructure/database/`  |
+| Application     | Business logic       | `apps/api/src/modules/<m>/application/`         |
+| Interface (API) | Data exposure        | `apps/api/src/modules/<m>/interface/`           |
+
+---
+
+## 8. Migration Strategy
+
+* All schema changes MUST go through Prisma migrations:
+  ```bash
+  npx prisma migrate dev --schema apps/api/prisma/schema.prisma --name <change>
+  ```
+* Migration files MUST be committed
 * Direct database modifications are NOT allowed
 
 ---
 
-## 8. Scalability Considerations
+## 9. Scalability Considerations
 
 * Schema must be extensible for:
-
   * RBAC expansion
-  * Multi-tenant support
+  * Multi-tenant support (future)
   * Audit logging
 * Avoid tight coupling between models
 
 ---
 
-## 9. Summary
+## 10. Summary
 
 * Prisma is the single ORM used across the system
-* Database logic is centralized in `libs/database`
-* Strict separation of layers is enforced
-* Authentication and RBAC rely on database structure
+* Schema lives in `apps/api/prisma/schema.prisma`
+* Runtime client lives in `apps/api/src/shared/infrastructure/database/`
+* Strict layer isolation is enforced (Domain ⊥ Prisma)
+* Authentication and RBAC rely on the database structure
 * Schema must be maintainable and scalable

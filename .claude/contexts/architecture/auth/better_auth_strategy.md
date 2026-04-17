@@ -23,17 +23,24 @@ Better Auth is the unified authentication system for this monorepo, responsible 
 ## 3. Architecture
 
 apps/
-├── api/                        # NestJS
+├── api/                                          # NestJS
 │   └── src/
-│       └── auth/               # Better Auth instance, Guards, Decorators
-├── web/                        # Next.js
+│       └── modules/
+│           └── auth/                             # Auth module (Clean Architecture)
+│               ├── infrastructure/               # Better Auth instance + adapter wiring
+│               ├── interface/
+│               │   ├── controllers/              # auth.controller.ts (mounts toNodeHandler)
+│               │   ├── guards/                   # AuthGuard, RolesGuard
+│               │   └── decorators/               # @User(), @Roles()
+│               └── auth.module.ts                # NestJS module registration
+├── web/                                          # Next.js
 │   └── src/
-│       └── auth/               # Better Auth client
+│       └── auth/                                 # Better Auth client
 libs/
-├── config/                     # Shared configuration
+├── config/                                       # Shared configuration
 ├── shared-types/
-│   └── auth.ts                 # AuthenticatedUser, UserRole, SessionUser...
-└── utils/                      # Shared utility functions
+│   └── auth.ts                                   # AuthenticatedUser, UserRole, SessionUser...
+└── utils/                                        # Shared utility functions
 
 ---
 
@@ -54,15 +61,16 @@ Contains only what **both frontend and backend use**:
 
 ---
 
-## 5. Backend (`apps/api/src/auth`)
+## 5. Backend (`apps/api/src/modules/auth`)
 
-All backend auth logic lives here:
+All backend auth logic lives here, organized per `nestjs_architecture.md`:
 
-* Better Auth instance & configuration
-* Session validation
-* Auth Guards
-* User decorator
-* Database session storage
+* `infrastructure/` — Better Auth instance, adapter configuration, env validation
+* `interface/controllers/` — `auth.controller.ts` mounting `toNodeHandler(auth)`
+* `interface/guards/` — `AuthGuard`, `RolesGuard`
+* `interface/decorators/` — `@User()`, `@Roles()`
+* `auth.module.ts` — NestJS module registration at the module root
+* Database session storage (delegated to the Prisma adapter)
 
 ---
 
@@ -116,18 +124,18 @@ All frontend auth logic lives here:
 
 ## 9. System Boundaries
 
-| Layer       | Responsibility                                 | Location                |
-|-------------|------------------------------------------------|-------------------------|
-| Frontend    | Auth client, session usage, route protection   | `apps/web/src/auth`     |
-| Backend     | Better Auth instance, session validation, RBAC | `apps/api/src/auth`     |
-| Shared Types| AuthenticatedUser, UserRole, SessionUser       | `libs/shared-types`     |
-| Database    | Persistent session & user data                 | managed by `apps/api`   |
+| Layer       | Responsibility                                 | Location                                  |
+|-------------|------------------------------------------------|-------------------------------------------|
+| Frontend    | Auth client, session usage, route protection   | `apps/web/src/auth`                       |
+| Backend     | Better Auth instance, session validation, RBAC | `apps/api/src/modules/auth`               |
+| Shared Types| AuthenticatedUser, UserRole, SessionUser       | `libs/shared-types`                       |
+| Database    | Persistent session & user data                 | managed by `apps/api`                     |
 
 ---
 
 ## 10. Summary
 
-* Better Auth instance → backend only (`apps/api/src/auth`)
+* Better Auth instance → backend only (`apps/api/src/modules/auth/infrastructure`)
 * Auth client → frontend only (`apps/web/src/auth`)
 * Shared types → `libs/shared-types` only
 * RBAC enforced at the backend
