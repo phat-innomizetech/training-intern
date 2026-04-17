@@ -58,3 +58,6 @@ test-output
 .env.*
 
 /spec
+
+
+package-lock.json

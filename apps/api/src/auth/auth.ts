@@ -1,5 +1,7 @@
 import { betterAuth } from 'better-auth';
+import { prismaAdapter } from 'better-auth/adapters/prisma';
 import { AUTH_ERRORS, BETTER_AUTH_SECRET_MIN_LENGTH } from './auth.constants';
+import { prisma } from '../infrastructure/database/prisma';
 
 function requireEnv(key: string): string {
   const value = process.env[key];
@@ -18,7 +20,9 @@ if (secret.length < BETTER_AUTH_SECRET_MIN_LENGTH) {
 export const auth = betterAuth({
   secret,
   baseURL: requireEnv('BETTER_AUTH_URL'),
-  // database adapter will be configured in subtask 2
+  database: prismaAdapter(prisma, {
+    provider: 'postgresql',
+  }),
 });
 
 export type Auth = typeof auth;
