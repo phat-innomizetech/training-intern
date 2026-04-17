@@ -72,12 +72,19 @@ Only types and helpers that are **genuinely shared between `web` and `api`** liv
 
 ## 4. Scaling by Domain
 
-As the project grows, follow Domain-Driven Design within NX:
+As the project grows, follow Domain-Driven Design within NX. **Backend and frontend modules use intentionally different shapes:**
 
-1. **Backend modules** — add new modules under `apps/api/src/modules/<name>/` following the Clean Architecture layout (`domain`, `application`, `infrastructure`, `interface`)
-2. **Frontend modules** — group by domain under `apps/web/src/modules/<name>/` per `nextjs_architecture.md`
-3. **Cross-app contracts** — when both apps need a type or constant, put it in `libs/shared-types`
-4. **NX boundaries** — use Nx tags (`type:app`, `type:lib`) to prevent circular dependencies
+| Side | Module shape | Why |
+|---|---|---|
+| Backend (`apps/api/src/modules/<name>/`) | Layered Clean Architecture: `{domain, application, infrastructure, interface}` + `<name>.module.ts` at the root | Server-side business logic benefits from explicit layer boundaries (testability, swappable infra, framework-independent domain). Mandated by `nestjs_architecture.md`. |
+| Frontend (`apps/web/src/modules/<name>/`) | Flat: `{components, hooks, services, types, utils}` | React UI doesn't benefit from the same layering — components, hooks, and services map directly to UI concerns. Mandated by `nextjs_architecture.md`. |
+
+**Do NOT** apply backend layering to frontend modules, and **do NOT** flatten backend modules into the frontend shape. They are different by design.
+
+Other scaling rules:
+
+1. **Cross-app contracts** — when both apps need a type or constant, put it in `libs/shared-types`
+2. **NX boundaries** — use Nx tags (`type:app`, `type:lib`) to prevent circular dependencies
 
 ## 5. Task Pipeline & Performance
 

@@ -89,7 +89,7 @@ Read these before implementing any layer:
 | `backend/nestjs_architecture.md` | Clean Architecture layers for NestJS (Domain/Application/Infrastructure/Interface) |
 | `backend/nestjs_types_constants_architecture.md` | Type and constant isolation per layer |
 | `backend/api_error_response_architecture.md` | Unified API response and error format |
-| `frontend/nextjs_architechture.md` | App Router structure, module organization, data flow |
+| `frontend/nextjs_architecture.md` | App Router structure, module organization, data flow |
 | `frontend/nextjs-design-system.md` | TailwindCSS 4 token-driven design system |
 | `auth/better_auth_strategy.md` | Better Auth integration strategy across frontend and backend |
 
@@ -201,7 +201,7 @@ Reference these for implementation guidance:
 
 - **Package manager:** Bun (configured in `.claude/package-manager.json`)
 - **Commits:** Conventional commits — `feat:`, `fix:`, `refactor:`, `docs:`, `test:`, `chore:`
-- **File naming:** `lowercase-kebab-case` for all files
+- **File naming:** `kebab-case` for all files **except React component files**, which are `PascalCase` and match their exported identifier (e.g., `UserCard.tsx` exporting `UserCard`). Reserved Next.js files (`page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `route.ts`, `middleware.ts`) keep their fixed lowercase names. See `frontend/nextjs_architecture.md` § 3
 - **Test files:** `*.test.js` / `*.test.ts` pattern
 - **No `console.log`** in production code — use structured logging
 - **No `any`** in TypeScript — use `unknown` and narrow safely
