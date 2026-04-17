@@ -1,7 +1,7 @@
 import { betterAuth } from 'better-auth';
 import { prismaAdapter } from 'better-auth/adapters/prisma';
 import { AUTH_ERRORS, BETTER_AUTH_SECRET_MIN_LENGTH } from './auth.constants';
-import { prisma } from '../infrastructure/database/prisma';
+import { prisma } from '../../../shared/infrastructure/database/prisma';
 
 function requireEnv(key: string): string {
   const value = process.env[key];

@@ -100,6 +100,7 @@
   },
   "devDependencies": {
     "@nestjs/testing": "^11.0.0",
-    "prisma": "^6.19.3"
+    "prisma": "^6.19.3",
+    "webpack-cli": "*"
   }
 }

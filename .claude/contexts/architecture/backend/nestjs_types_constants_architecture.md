@@ -291,16 +291,39 @@ export type Pagination<T> = {
 
 ### 8.3 API Response Standard
 
+The `ApiResponse<T>` envelope MUST follow the format defined in `api_response_rules.md` and `api_error_response_architecture.md` — a discriminated union on `success`:
+
 ```ts
-export type ApiResponse<T> = {
+export type ApiSuccess<T> = {
+  success: true;
   data: T;
   meta?: {
+    requestId?: string;
+    traceId?: string;
+    timestamp?: string;
     pagination?: {
+      page: number;
+      limit: number;
       total: number;
+      totalPages: number;
     };
   };
 };
+
+export type ApiError = {
+  success: false;
+  error: {
+    code: string;
+    message: string;
+    type: 'BUSINESS' | 'VALIDATION' | 'SYSTEM' | 'AUTH';
+    details?: Record<string, unknown>;
+  };
+};
+
+export type ApiResponse<T> = ApiSuccess<T> | ApiError;
 ```
+
+> ❗ Do NOT define `ApiResponse<T>` without the `success` discriminator. The global `ResponseInterceptor` and `GlobalExceptionFilter` rely on this shape — see `api_response_rules.md`.
 
 ---
 

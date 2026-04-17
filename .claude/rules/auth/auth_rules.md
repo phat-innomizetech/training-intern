@@ -11,12 +11,17 @@
 
 ## 📁 Code Location Rules
 
-| Code                              | Correct Location           | Wrong Location      |
-|-----------------------------------|----------------------------|---------------------|
-| Better Auth instance/config       | `apps/api/src/auth`        | `libs/`             |
-| Auth Guards, Decorators           | `apps/api/src/auth`        | `libs/`             |
-| Better Auth client                | `apps/web/src/auth`        | `libs/`             |
-| AuthenticatedUser, UserRole types | `libs/shared-types`        | `apps/`             |
+| Code                              | Correct Location                                                | Wrong Location      |
+|-----------------------------------|-----------------------------------------------------------------|---------------------|
+| Better Auth instance/config       | `apps/api/src/modules/auth/infrastructure`                      | `libs/`             |
+| Auth Controller                   | `apps/api/src/modules/auth/interface/controllers`               | `libs/`             |
+| Auth Guards, Decorators           | `apps/api/src/modules/auth/interface/guards` (and `decorators`) | `libs/`             |
+| Auth Module (`auth.module.ts`)    | `apps/api/src/modules/auth`                                     | `libs/`             |
+| Better Auth client                | `apps/web/src/auth`                                             | `libs/`             |
+| AuthenticatedUser, UserRole types | `libs/shared-types`                                             | `apps/`             |
+
+> The auth module follows the layered structure mandated by `.claude/contexts/architecture/backend/nestjs_architecture.md`:
+> `modules/auth/{infrastructure, interface, [domain], [application]}` + `auth.module.ts` at the module root.
 
 ---
 
@@ -25,7 +30,7 @@
 ### Backend Requirements
 
 * MUST extract session token from Authorization header OR cookies
-* MUST validate session using Better Auth instance at `apps/api/src/auth`
+* MUST validate session using Better Auth instance at `apps/api/src/modules/auth/infrastructure`
 * MUST attach authenticated user to request context
 
 ---
@@ -52,7 +57,7 @@ All protected routes MUST use AuthGuard:
 @UseGuards(AuthGuard)
 ```
 
-* `AuthGuard` lives at `apps/api/src/auth/guards/`
+* `AuthGuard` lives at `apps/api/src/modules/auth/interface/guards/`
 * Responsibilities: validate session, reject unauthenticated requests, attach user to request
 
 ---
@@ -124,8 +129,10 @@ When generating code:
 
 ## ✅ Summary
 
-* Authentication → AuthGuard at `apps/api/src/auth`
-* Session validation → Better Auth instance at `apps/api/src/auth`
+* Authentication → `AuthGuard` at `apps/api/src/modules/auth/interface/guards`
+* Session validation → Better Auth instance at `apps/api/src/modules/auth/infrastructure`
+* HTTP routes → Controller at `apps/api/src/modules/auth/interface/controllers`
+* Module registration → `apps/api/src/modules/auth/auth.module.ts`
 * Shared types → `libs/shared-types`
 
 This rule is **MANDATORY** for all backend services.
