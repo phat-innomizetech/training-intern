@@ -50,31 +50,39 @@
 
 ### File Naming
 
-* Components → kebab-case
-* Services → kebab-case
-* Utils → kebab-case
-* Types → kebab-case
+* React components → **PascalCase** (e.g., `UserCard.tsx`)
+* Hooks → kebab-case (e.g., `use-users.ts`)
+* Services → kebab-case (e.g., `user-service.ts`)
+* Utils → kebab-case (e.g., `format-date.ts`)
+* Types → kebab-case (e.g., `user-types.ts`)
+* Reserved Next.js files → fixed lowercase (`page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `route.ts`, `middleware.ts`)
+
+> Component file names MUST match the exported component identifier:
+> `UserCard.tsx` exports `UserCard`. See `nextjs_architecture.md` § 3.
 
 ---
 
 ### Component Naming
 
 ```tsx
+// File: UserCard.tsx
 export function UserCard() {}
 ```
 
-* MUST use PascalCase
+* Identifier MUST use PascalCase
+* Filename MUST use PascalCase and match the identifier
 
 ---
 
 ### Hook Naming
 
 ```ts
+// File: use-users.ts
 export function useUsers() {}
 ```
 
-* MUST start with `use`
-* MUST use camelCase
+* Identifier MUST start with `use` and use camelCase
+* Filename MUST be kebab-case
 
 ---
 

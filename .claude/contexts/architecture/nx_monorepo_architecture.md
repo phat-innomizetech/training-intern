@@ -32,10 +32,21 @@ To maximize code reuse and maintainability, the logic is decoupled into specific
 - **Middleware**: Used for global route protection (e.g., redirecting unauthenticated users).
 - **Server-Side Checks**: Permission checks must be performed in Server Components before rendering sensitive data.
 
-## 4. Scaling by Domain (Advanced Architecture)
-As the project grows, we follow the **Domain-Driven Design (DDD)** approach within NX:
-1. **Grouping**: Libraries should be prefixed by domain (e.g., `libs/user/feature-management`, `libs/user/ui-card`).
-2. **Boundary Rules**: We use Nx tags (`type:app`, `type:lib`) to prevent circular dependencies.
+## 4. Scaling by Domain
+
+As the project grows, follow Domain-Driven Design within NX. **Backend and frontend modules use intentionally different shapes:**
+
+| Side | Module shape | Why |
+|---|---|---|
+| Backend (`apps/api/src/modules/<name>/`) | Layered Clean Architecture: `{domain, application, infrastructure, interface}` + `<name>.module.ts` at the root | Server-side business logic benefits from explicit layer boundaries (testability, swappable infra, framework-independent domain). Mandated by `nestjs_architecture.md`. |
+| Frontend (`apps/web/src/modules/<name>/`) | Flat: `{components, hooks, services, types, utils}` | React UI doesn't benefit from the same layering — components, hooks, and services map directly to UI concerns. Mandated by `nextjs_architecture.md`. |
+
+**Do NOT** apply backend layering to frontend modules, and **do NOT** flatten backend modules into the frontend shape. They are different by design.
+
+Other scaling rules:
+
+1. **Cross-app contracts** — when both apps need a type or constant, put it in `libs/shared-types`
+2. **NX boundaries** — use Nx tags (`type:app`, `type:lib`) to prevent circular dependencies
 
 ## 5. Task Pipeline & Performance
 - **Caching**: Local and Remote caching are enabled for `build`, `test`, and `lint` targets.
